@@ -42,25 +42,13 @@ Criar um diretório online funcional, acessível e atrativo para facilitar a bus
 
 ```bash
 ├── css/
-│   └── styles.css            # Arquivo principal de estilos
-├── img/                      # Imagens, ícones e logos
-├── .gitattributes            # Configurações do Git
-├── index.html                # Página inicial
-├── pagina_loja.html          # Página de listagem de lojas
-├── pagina_noticias.html      # Página de notícias e eventos
+│   └── styles.css            
+├── img/                      
+├── .gitattributes            
+├── index.html                
+├── pagina_loja.html          
+├── pagina_noticias.html      
 ````
-<br>
-
-## Descrição:
-- **css/** → 
-- **img/** → 
-- **.gitattributes** → 
-- **index.html** → 
-- **pagina_loja.html** → 
-- **pagina_noticias.html** → 
-
-
-<br>
 
 ## Justificativas de Design
 ### **Fontes:**  
