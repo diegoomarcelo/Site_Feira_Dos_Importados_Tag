@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lojas</title>
+
+  <!-- Poppins (igual ao seu design) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-grid">
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <img src="img/logo.png" alt="Importados de Taguatinga">
+    </a>
+
+    <!-- Menu central -->
+    <nav class="menu" aria-label="principal">
+      <a class="menu__link is-active" href="index.html">INICIO</a>
+      <a class="menu__link" href="pagina_loja.html">LOJAS</a>
+      <a class="menu__link" href="pagina_noticias.html">NOTÍCIAS</a>
+    </nav>
+
+    <!-- Ações (direita) -->
+    <div class="actions">
+      <a class="act" href="#"><span class="i-user" aria-hidden="true">
+        <img src="img/icones_sites/perfil-de-usuario.png">
+      </span>Entrar</a>
+      <a class="act" href="#">Criar Conta</a>
+      <a class="btn-pill" href="#">Anuncie sua Loja +</a>
+    </div>
+  </div>
+  <div class="divider"></div>
+</header>
+
+<!-- Faixa -->
+<section class="breadcrumb" aria-label="breadcrumb">
+  <div class="container">
+    <a href="#">Início</a>
+    <span class="sep">›</span>
+    <span class="current">Lojas</span>
+  </div>
+</section>
+
+<!-- FAIXA AZUL + BUSCA -->
+<section class="searchband">
+  <div class="container search-row ">
+    <!-- Campo 1: texto -->
+    <label class="input" for="q">
+      <img class="input__icon" src="img/icones_sites/running.png" alt="icone de tenis  " aria-hidden="true">
+      <input id="q" type="search" placeholder="Loja, produto ou serviço">
+    </label>
+
+    <!-- Campo 2: selecao -->
+    <label class="input" for="tipo">
+      <img class="input__icon" src="img/icones_sites/options-lines.png" alt="" aria-hidden="true">
+      <select id="tipo">
+        <option selected>Qual tipo de loja?</option>
+        <option>Eletrônicos</option>
+        <option>Moda e Acessórios</option>
+        <option>Ótica</option>
+        <option>Casa e Decoração</option>
+      </select>
+    </label>
+  </div>
+</section>
+
+<!-- CONTEÚDO • FILTROS + LISTA DE LOJAS -->
+<main class="page">
+  <div class="container page-grid">
+
+    <!-- ===== LADO ESQUERDO • FILTROS ===== -->
+    <aside class="sidebar">
+      <!-- Categorias -->
+      <section class="panel">
+        <h3 class="panel__title">Categorias</h3>
+        <ul class="checklist">
+          <li><label><input type="checkbox" checked> <span>Todos</span></label></li>
+          <li><label><input type="checkbox"> <span>Acessórios</span></label></li>
+          <li><label><input type="checkbox"> <span>Alimentação</span></label></li>
+          <li><label><input type="checkbox"> <span>Brinquedos</span></label></li>
+          <li><label><input type="checkbox"> <span>Conserto de Impressoras</span></label></li>
+          <li><label><input type="checkbox"> <span>Eletrônicos</span></label></li>
+          <li><label><input type="checkbox"> <span>Entrega Expressa</span></label></li>
+          <li><label><input type="checkbox"> <span>Ferramentas</span></label></li>
+          <li><label><input type="checkbox"> <span>Games</span></label></li>
+          <li><label><input type="checkbox"> <span>Informática</span></label></li>
+          <li><label><input type="checkbox"> <span>Ótica</span></label></li>
+          <li><label><input type="checkbox"> <span>Perfumaria</span></label></li>
+          <li><label><input type="checkbox"> <span>Peças de celular</span></label></li>
+          <li><label><input type="checkbox"> <span>Pesca,Camping  e Esportes</span></label></li>
+          <li><label><input type="checkbox"> <span>Produtos  de Beleza</span></label></li>
+          <li><label><input type="checkbox"> <span>Relojoaria</span></label></li>
+          <li><label><input type="checkbox"> <span>Reparos de Celulares e tablets</span></label></li>
+          <li><label><input type="checkbox"> <span>Som Automotivo</span></label></li>
+          <li><label><input type="checkbox"> <span>Tabacaria</span></label></li>
+          <li><label><input type="checkbox"> <span>Venda de Celulares </span></label></li>
+          <li><label><input type="checkbox"> <span>Vestuário</span></label></li>
+        </ul>
+      </section>
+
+      <!-- Blocos -->
+      <section class="panel">
+        <h3 class="panel__title">Blocos</h3>
+        <ul class="checklist">
+          <li><label><input type="checkbox"> <span>Bloco A</span></label></li>
+          <li><label><input type="checkbox"> <span>Bloco B</span></label></li>
+          <li><label><input type="checkbox"> <span>Bloco C</span></label></li>
+          <li><label><input type="checkbox"> <span>Bloco D</span></label></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- ===== LADO DIREITO • LISTAGEM ===== -->
+    <section class="listing">
+
+      <!-- Cabeçalho da listagem -->
+      <div class="listing__header">
+        <h2 class="listing__title">Todas as Lojas FIT</h2>
+
+        <div class="sort">
+          <span class="sort__label">Ordenador por:</span>
+          <div class="select-wrap">
+            <select>
+              <option>Mais relevante</option>
+              <option>Nome (A–Z)</option>
+              <option>Corredor</option>
+            </select>
+            <img class="select-caret" src="img/icones_sites/seta-para-baixo.png" alt="seta para baixo" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+
+      <!-- Grade de cards -->
+      <div class="cards">
+        <!-- Card 1 -->
+        <article class="shop-card">
+          <a href="#" class="thumb">
+            <img src="img/img_da_loja_para_catalago/ad_acessorios.jpg" alt="Logo da loja ad_acessorios">
+          </a>
+          <div class="shop-card__body">
+            <a href="#" class="shop-card__title">Ad Acessórios</a>
+            <p class="shop-card__meta">
+              <img src="img/icones_sites/marker.png" alt="Ícone de localização" class="icon-loc">
+                Corredor Loja 24
+            </p>
+            <p class="shop-card__tags">Acessórios, presentes</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="shop-card">
+          <a href="#" class="thumb">
+            <img src="img/img_da_loja_para_catalago/apple_mania.jpg" alt="Logo da loja apple_mania">
+          </a>
+          <div class="shop-card__body">
+            <a href="#" class="shop-card__title">Apple Mania</a>
+            <p class="shop-card__meta">
+              <img src="img/icones_sites/marker.png" alt="Ícone de localização" class="icon-loc">
+                Corredor Loja 87
+            </p>
+            <p class="shop-card__tags">Smartphones, assistência</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="shop-card">
+          <a href="#" class="thumb">
+            <img src="img/img_da_loja_para_catalago/blue tech.jpg" alt="blue_tech logo da loja">
+          </a>
+          <div class="shop-card__body">
+            <a href="#" class="shop-card__title">Blue Tech</a>
+            <p class="shop-card__meta">
+              <img src="img/icones_sites/marker.png" alt="Ícone de localização" class="icon-loc">
+                Corredor A Loja 04
+            </p>
+            <p class="shop-card__tags">eletrônicos em geral, manutenção , vendas</p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+         <article class="shop-card">
+          <a href="#" class="thumb">
+            <img src="img/img_da_loja_para_catalago/discovery importados.jpg" alt="logo da loja discovery">
+          </a>
+          <div class="shop-card__body">
+            <a href="#" class="shop-card__title">Discovery Importados </a>
+            <p class="shop-card__meta">
+              <img src="img/icones_sites/marker.png" alt="Ícone de localização" class="icon-loc">
+                Corredor C Loja 142
+            </p>
+            <p class="shop-card__tags">eletrônicos em geral, manutenção , vendas</p>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+         <article class="shop-card">
+          <a href="#" class="thumb">
+            <img src="img/img_da_loja_para_catalago/fang_imagem.jpg" alt="logo da loja fang peças">
+          </a>
+          <div class="shop-card__body">
+            <a href="#" class="shop-card__title">Fang Peças</a>
+            <p class="shop-card__meta">
+              <img src="img/icones_sites/marker.png" alt="Ícone de localização" class="icon-loc">
+                Corredor A Loja 46
+            </p>
+            <p class="shop-card__tags">ferramentas,jogo de peças, ferro solda </p>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+         <article class="shop-card">
+          <a href="#" class="thumb">
+            <img src="img/img_da_loja_para_catalago/WhatsApp-Image-2024-09-10-at-10.33.00.jpeg" alt="Logo da loja rm acessorios">
+          </a>
+          <div class="shop-card__body">
+            <a href="#" class="shop-card__title">RM Acessórios</a>
+            <p class="shop-card__meta">
+              <img src="img/icones_sites/marker.png" alt="Ícone de localização" class="icon-loc">
+                Corredor C Loja 118
+            </p>
+            <p class="shop-card__tags">feramentas, fontes, parafusadeiras</p>
+          </div>
+        </article>
+
+        <!-- Card 7 -->
+         <article class="shop-card">
+          <a href="#" class="thumb">
+            <img src="img/img_da_loja_para_catalago/adega do bode.jpg" alt="logo da loja adega do bode">
+          </a>
+          <div class="shop-card__body">
+            <a href="#" class="shop-card__title">Adega do bode</a>
+            <p class="shop-card__meta">
+              <img src="img/icones_sites/marker.png" alt="Ícone de localização" class="icon-loc">
+                Corredor C Loja 15
+            </p>
+            <p class="shop-card__tags">bebidas,alimentos,distribuidora</p>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+         <article class="shop-card">
+          <a href="#" class="thumb">
+            <img src="img/img_da_loja_para_catalago/alf variedades e gravacoes.jpg" alt="logo da loja  alf variedades e gravacoes">
+          </a>
+          <div class="shop-card__body">
+            <a href="#" class="shop-card__title">ALF Variedades</a>
+            <p class="shop-card__meta">
+              <img src="img/icones_sites/marker.png" alt="Ícone de localização" class="icon-loc">
+                Corredor B Loja 40
+            </p>
+            <p class="shop-card__tags">eletronicos , manutencao , solda</p>
+          </div>
+        </article>
+
+        <!-- Card 9 -->
+         <article class="shop-card">
+          <a href="#" class="thumb">
+            <img src="img/img_da_loja_para_catalago/ALX ESPORTES.jpg" alt="logo da loja alx esportes">
+          </a>
+          <div class="shop-card__body">
+            <a href="#" class="shop-card__title">ALX Esportes</a>
+            <p class="shop-card__meta">
+              <img src="img/icones_sites/marker.png" alt="Ícone de localização" class="icon-loc">
+                Corredor D Loja 22
+            </p>
+            <p class="shop-card__tags">esportes, venda de blusa, equipamentos</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Rodapé da listagem -->
+      <div class="listing__footer">
+        <p class="results">Exibição 1 para 9 de 200 resultados</p>
+        <nav class="pager" aria-label="Paginação">
+          <button class="pg" disabled>«</button>
+          <button class="pg is-active">1</button>
+          <button class="pg">2</button>
+          <button class="pg">3</button>
+          <button class="pg">»</button>
+        </nav>
+      </div>
+
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- Logo -->
+    <div class="footer__logo">
+      <img src="img/logo.png" alt="Feira dos Importados de Taguatinga">
+    </div>
+
+    <!-- Sobre Nós -->
+    <div class="footer__col">
+      <h4>Sobre Nós</h4>
+      <ul>
+        <li><a href="#">Perguntas Frequentes</a></li>
+        <li><a href="#">Nossa História</a></li>
+        <li><a href="#">Nossas Lojas</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+      </ul>
+    </div>
+
+    <!-- Horário -->
+    <div class="footer__col ">
+      <h4>Horário de Funcionamento</h4>
+      <p>Segunda a Sexta: 08:00 - 18:00</p>
+      <p>Sábado: 08:00 - 18:00</p>
+      <p>Domingo: 08:00 - 16:00</p>
+    </div>
+
+    <!-- Atendimento -->
+    <div class="footer__col">
+      <h4>Atendimento</h4>
+      <div class="footer__contact">
+        <div class="contact-item">
+          <img src="img/icons_do_rodape/o-email.png" alt="ícone email">
+          <a href="contato@feiradosimportados.org.br">contato@feiradosimportados.org.br</a>
+        </div>
+        <div class="contact-item">
+          <img src="img/icons_do_rodape/telefone (1).png" alt="ícone telefone">
+          <span>(61) 3352-5217</span>
+        </div>
+        <div class="contact-item">
+          <img src="img/icons_do_rodape/whatsapp.png" alt="ícone whatsapp">
+          <span>(61) 9 9138-7437</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Redes sociais -->
+    <div class="footer__social">
+      <h4>Siga a Feira</h4>
+      <div class="social-icons">
+        <a href="#"><img src="img/icons_do_rodape/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="img/icons_do_rodape/social-media.png" alt="Facebook"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    © 2025 Feira dos Importados Taguatinga – Todos os direitos reservados
+  </div>
+</footer>
+
+
+</body>
+</html>
