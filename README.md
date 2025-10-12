@@ -52,12 +52,12 @@ Criar um diretório online funcional, acessível e atrativo para facilitar a bus
 <br>
 
 ## Descrição:
-- **css/** → estilos globais do projeto
-- **img/** → imagens e ícones utilizados no site
-- **.gitattributes** → configurações para versionamento consistente
-- **index.html** → página inicial com busca e destaques
-- **pagina_loja.html** → diretório de lojas com filtros
-- **pagina_noticias.html** → seção de notícias e eventos
+- **css/** → 
+- **img/** → 
+- **.gitattributes** → 
+- **index.html** → 
+- **pagina_loja.html** → 
+- **pagina_noticias.html** → 
 
 
 <br>
