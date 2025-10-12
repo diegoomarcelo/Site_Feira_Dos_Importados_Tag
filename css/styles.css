@@ -6,10 +6,10 @@
   --linha:#000000;
   --teal:#00B8C9;
   --field-bg:#ffffff;
-  --borda-linha:#E6EEF2; /* borda suave dos inputs */
+  --borda-linha:#E6EEF2; 
 }
-
-/* ===== Base ===== */
+/*-- COMENTÁRIOS IMPORTANTES PARA FÁCIL INTERPRETAÇÃO DO CÓDIGO --*/
+/*--Base--*/
 *{box-sizing:border-box}
 body{
   margin:0;
@@ -20,7 +20,7 @@ body{
 a{text-decoration:none;color:inherit}
 .container{width:min(1200px,92%);margin-inline:auto}
 
-/* ===== Header ===== */
+/* --Header-- */
 .navbar{background:var(--bg)}
 .divider{height:1px;background:var(--linha)}
 
@@ -29,7 +29,7 @@ a{text-decoration:none;color:inherit}
   grid-template-columns:auto 1fr auto; /* logo | menu | ações */
   align-items:center;
   column-gap:64px;
-  height: 160px;            /* mais alto, como no print */
+  height: 160px;            
 }
 
 /* Logo maior e estável */
@@ -40,7 +40,7 @@ a{text-decoration:none;color:inherit}
   display: block;
 }
 
-/* Menu central (não quebra e fica bem espaçado) */
+/* Menu central */
 .menu{
  display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@ a{text-decoration:none;color:inherit}
 }
 
 
-/* ===== Ações à direita ===== */
+/* Ações à direita */
 .actions {
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@ a{text-decoration:none;color:inherit}
 }
 .act:hover { color: #00B8C9; }
 
-/* Ícone (SVG ou imagem) */
+/* Ícone */
 .i-user {
   width: 22px;
   height: 22px;
@@ -96,10 +96,10 @@ a{text-decoration:none;color:inherit}
 .btn-pill {
   background: var(--accent);
   color: #0f2e44;
-  padding: 16px 40px;           /* ↑ aumenta a altura e largura */
-  border-radius: 36px;          /* ↑ deixa mais arredondado */
-  font-size: 18px;              /* ↑ texto um pouco maior */
-  font-weight: 800;             /* ↑ texto mais “gordinho” */
+  padding: 16px 40px;           /*  aumenta a altura e largura */
+  border-radius: 36px;          /*  deixa mais arredondado */
+  font-size: 18px;              /*  texto um pouco maior */
+  font-weight: 800;             /*  texto mais “gordinho” */
   white-space: nowrap;
   line-height: 1;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -111,7 +111,7 @@ a{text-decoration:none;color:inherit}
 }
 
 
-/* ===== Sombras de texto (suave) ===== */
+/*  Sombras de texto   */
 .menu__link,
 .act {
   text-shadow: 0 2px 3px rgba(0,0,0,0.18);
@@ -383,10 +383,10 @@ cursor:pointer;
  .button{
   background: #00B8C9;
   color: #fff;
-  padding: 16px 40px;           /* ↑ aumenta a altura e largura */
-  border-radius: 20px;          /* ↑ deixa mais arredondado */
-  font-size: 18px;              /* ↑ texto um pouco maior */
-  font-weight: 800;             /* ↑ texto mais “gordinho” */
+  padding: 16px 40px;           /*  aumenta a altura e largura */
+  border-radius: 20px;          /*  deixa mais arredondado */
+  font-size: 18px;              /*  texto um pouco maior */
+  font-weight: 800;             /*  texto mais “gordinho” */
   white-space: nowrap;
   line-height: 1;
   box-shadow: 0 4px 10px rgba(3, 173, 246, 0.15);
