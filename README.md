@@ -33,7 +33,7 @@ Criar um diretório online funcional, acessível e atrativo para facilitar a bus
 <br>
 
 ## Protótipo no Figma  
-[**Acessar Protótipo Detalhado**](#)  
+[**Acessar Protótipo Detalhado**](https://www.figma.com/design/k7QkSJmKcwijSkJKu7ek7H/Prototipo-Site?node-id=0-1&p=f&t=3SYhpRjURF8qGkYw-0)  
 
 
 <br>
