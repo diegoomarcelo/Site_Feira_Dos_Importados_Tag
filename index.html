@@ -37,24 +37,31 @@
 </header>
 
 
-<!-- Banner -->
-  <section class="banne">
-    <div class="overlay">
-      <h2>ENCONTRE O QUE</h2>
-      <h3>VOCÊ PRECISA</h3>
+<!-- Hero / Banner -->
+<section class="hero">
+  <div class="hero__overlay">
+    <h2 class="hero__title">ENCONTRE O QUE</h2>
+    <h3 class="hero__subtitle">VOCÊ PRECISA</h3>
 
-      <div class="search-box">
-        <input type="text" placeholder="Loja, produto ou serviço.">
-        <select>
-          <option>Busca por qual tipo de loja?</option>
+    <form class="hero__search" action="#" method="get">
+      <div class="hero__field">
+        <input type="text" name="q" placeholder="Loja, produto ou serviço." aria-label="Buscar por loja, produto ou serviço">
+      </div>
+
+      <div class="hero__field">
+        <select name="tipo" aria-label="Selecionar tipo de loja">
+          <option selected>Busca por qual tipo de loja?</option>
           <option>Eletrônicos</option>
           <option>Roupas</option>
           <option>Alimentos</option>
         </select>
-        <button>Buscar</button>
       </div>
-    </div>
-  </section> 
+
+      <button class="hero__btn" type="submit">Buscar</button>
+    </form>
+  </div>
+</section>
+
 
   <!-- CATEGORIAS EM DESTAQUE -->
   <section class="cats">
