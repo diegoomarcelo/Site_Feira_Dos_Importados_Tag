@@ -20,6 +20,9 @@ body{
 a{text-decoration:none;color:inherit}
 .container{width:min(1200px,92%);margin-inline:auto}
 
+
+
+
 /* --Header-- */
 .navbar{background:var(--bg)}
 .divider{height:1px;background:var(--linha)}
@@ -1369,4 +1372,91 @@ cursor:pointer;
   .footer-grid { 
     grid-template-columns: 1fr; 
   }
+}
+
+/* =========================
+   MODAL DE BOAS-VINDAS
+========================= */
+
+.welcome-overlay {
+  /* Fundo escuro semi-transparente */
+  position: fixed;
+  inset: 0; /* (equivale a top/bottom/left/right: 0) */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  
+  /* Centraliza a caixa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Animação de fade */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Estado oculto */
+.welcome-overlay.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.welcome-modal {
+  /* A caixa branca */
+  background: var(--bg); /* Usa a cor de fundo principal */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  width: min(500px, 90%); /* 500px de largura, ou 90% se a tela for menor */
+  padding: 2rem 2.5rem;
+  text-align: center;
+  position: relative; /* Necessário para o botão 'X' */
+  
+  /* Animação de "pop" */
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* Faz a caixa "encolher" ao fechar */
+.welcome-overlay.is-hidden .welcome-modal {
+  transform: scale(0.95);
+}
+
+.welcome-modal__title {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1.75rem; /* 28px */
+  margin: 0 0 0.5rem;
+}
+
+.welcome-modal__body {
+  color: var(--ink-muted);
+  font-size: 1rem; /* 16px */
+  margin: 0.5rem 0 0;
+  line-height: 1.5;
+}
+
+.welcome-modal__close {
+  /* Botão 'X' */
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  
+  /* Reseta a aparência de botão */
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  
+  /* Estilo do 'X' */
+  font-family: Arial, sans-serif; /* Garante que o 'X' seja padrão */
+  font-size: 2.5rem;  /* 40px */
+  font-weight: 300;
+  line-height: 1;
+  color: #aaa;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.welcome-modal__close:hover {
+  color: var(--ink);
 }
