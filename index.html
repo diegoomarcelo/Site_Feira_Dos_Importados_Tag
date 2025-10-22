@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,59 +9,61 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
 
-<header class="navbar">
-  <div class="container nav-grid">
-    <!-- Logo -->
-    <a href="#" class="logo">
-      <img src="img/logo.png" alt="Importados de Taguatinga">
-    </a>
+  <header class="navbar">
+    <div class="container nav-grid">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <img src="img/logo.png" alt="Importados de Taguatinga">
+      </a>
 
-    <!-- Menu central -->
-    <nav class="menu" aria-label="principal">
-      <a class="menu__link is-active" href="index.html">INICIO</a>
-      <a class="menu__link" href="pagina_loja.html">LOJAS</a>
-      <a class="menu__link" href="pagina_noticias.html">NOTÍCIAS</a>
-    </nav>
+      <!-- Menu central -->
+      <nav class="menu" aria-label="principal">
+        <a class="menu__link is-active" href="index.html">INICIO</a>
+        <a class="menu__link" href="pagina_loja.html">LOJAS</a>
+        <a class="menu__link" href="pagina_noticias.html">NOTÍCIAS</a>
+      </nav>
 
-    <!-- Ações (direita) -->
-    <div class="actions">
-      <a class="act" href="#"><span class="i-user" aria-hidden="true">
-        <img src="img/icones_sites/perfil-de-usuario.png">
-      </span>Entrar</a>
-      <a class="act" href="#">Criar Conta</a>
-      <a class="btn-pill" href="#">Anuncie sua Loja +</a>
+      <!-- Ações (direita) -->
+      <div class="actions">
+        <a class="act" href="#"><span class="i-user" aria-hidden="true">
+            <img src="img/icones_sites/perfil-de-usuario.png">
+          </span>Entrar</a>
+        <a class="act" href="#">Criar Conta</a>
+        <a class="btn-pill" href="#">Anuncie sua Loja +</a>
+      </div>
     </div>
-  </div>
-  <div class="divider"></div>
-</header>
+    <div class="divider"></div>
+  </header>
 
 
-<!-- Hero / Banner -->
-<section class="hero">
-  <div class="hero__overlay">
-    <h2 class="hero__title">ENCONTRE O QUE</h2>
-    <h3 class="hero__subtitle">VOCÊ PRECISA</h3>
+  <!-- Hero / Banner -->
+  <section class="hero">
+    <div class="hero__overlay">
+      <h2 class="hero__title">ENCONTRE O QUE</h2>
+      <h3 class="hero__subtitle">VOCÊ PRECISA</h3>
 
-    <form class="hero__search" action="#" method="get">
-      <div class="hero__field">
-        <input type="text" name="q" placeholder="Loja, produto ou serviço." aria-label="Buscar por loja, produto ou serviço">
-      </div>
+      <form class="hero__search" action="#" method="get">
+        <div class="hero__field">
+          <input type="text" name="q" placeholder="Loja, produto ou serviço."
+            aria-label="Buscar por loja, produto ou serviço">
+        </div>
 
-      <div class="hero__field">
-        <select name="tipo" aria-label="Selecionar tipo de loja">
-          <option selected>Busca por qual tipo de loja?</option>
-          <option>Eletrônicos</option>
-          <option>Roupas</option>
-          <option>Alimentos</option>
-        </select>
-      </div>
+        <div class="hero__field">
+          <select name="tipo" aria-label="Selecionar tipo de loja">
+            <option selected>Busca por qual tipo de loja?</option>
+            <option>Eletrônicos</option>
+            <option>Roupas</option>
+            <option>Alimentos</option>
+          </select>
+        </div>
 
-      <button class="hero__btn" type="submit">Buscar</button>
-    </form>
-  </div>
-</section>
+        <button class="hero__btn" type="submit">Buscar</button>
+      </form>
+    </div>
+  </section>
 
 
   <!-- CATEGORIAS EM DESTAQUE -->
@@ -113,7 +116,8 @@
         </article>
 
         <!--  Promocional -->
-        <article class="promo-card" style="background-image:url('img/img_do_catalago_pagina_inicial/foto_da_Feira.jpg');">
+        <article class="promo-card"
+          style="background-image:url('img/img_do_catalago_pagina_inicial/foto_da_Feira.jpg');">
           <div class="promo-card__body">
             <p class="promo-card__kicker">Passeie pela feira</p>
             <p class="promo-card__sub">sem sair de casa</p>
@@ -123,192 +127,336 @@
       </div>
     </div>
   </section>
-  
 
- <section class="cats">
-  <div class="container">
-    <div class="cats__tag">#FeiraImportadosIndica</div>
-    <h2 class="cats__title">Lojas Favoritas da Feira</h2>
-  </div>
+
+  <section class="cats">
+    <div class="container">
+      <div class="cats__tag">#FeiraImportadosIndica</div>
+      <h2 class="cats__title">Lojas Favoritas da Feira</h2>
+    </div>
 
 
     <!-- CONTROLES -->
     <div class="fav-controls container">
-        <button class="pill">Eletrônicos</button>
-        <button class="pill">Celulares e Acessórios</button>
-        <button class="pill">Produtos de Beleza</button>
-        <button class="pill">Som Automotivo</button>
-        <button class="pill">Informática</button>
+      <button class="pill is-active" data-filter="eletronicos">Eletrônicos</button>
+      <button class="pill" data-filter="celulares">Celulares e Acessórios</button>
+      <button class="pill" data-filter="beleza">Produtos de Beleza</button>
+      <button class="pill" data-filter="som">Som Automotivo</button>
+      <button class="pill" data-filter="informatica">Ferramentas</button>
     </div>
 
     <!-- CARROSSEL -->
     <section class="fav-slider container">
-    <div class="slider-viewport">
+      <div class="slider-viewport">
         <div class="slider-track" id="favTrack">
-        <!-- PÁGINA 1 -->
-        <div class="slider-page">
+          <!-- PÁGINA 1  ELETRONICO-->
+          <div class="slider-page">
             <div class="cards-row">
-            <!-- CARD 1 -->
-            <article class="shop-card">
+              <!-- CARD 1 -->
+              <article class="shop-card">
                 <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/ad_acessorios.jpg" alt=""></a>
                 <div class="shop-card__body">
-                <a href="#" class="shop-card__title">Ad Acessórios</a>
-                <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor E Loja 24</p>
-                <p class="shop-card__tags">eletrônicos em geral, manutenção, vendas</p>
+                  <a href="#" class="shop-card__title">Ad Acessórios</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor E
+                    Loja 24</p>
+                  <p class="shop-card__tags">eletrônicos em geral, manutenção, vendas</p>
                 </div>
-            </article>
+              </article>
 
-            <!-- CARD 2 -->
-            <article class="shop-card">
+              <!-- CARD 2 -->
+              <article class="shop-card">
                 <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/apple_mania.jpg" alt=""></a>
                 <div class="shop-card__body">
-                <a href="#" class="shop-card__title">Apple Mania</a>
-                <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor B Loja 87</p>
-                <p class="shop-card__tags">assistência técnica, trocas de vidro</p>
+                  <a href="#" class="shop-card__title">Apple Mania</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor B
+                    Loja 87</p>
+                  <p class="shop-card__tags">assistência técnica, trocas de vidro</p>
                 </div>
-            </article>
+              </article>
 
-            <!-- CARD 3 -->
-            <article class="shop-card">
+              <!-- CARD 3 -->
+              <article class="shop-card">
                 <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/blue tech.jpg" alt=""></a>
                 <div class="shop-card__body">
-                <a href="#" class="shop-card__title">Blue Tech</a>
-                <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor A Loja 04</p>
-                <p class="shop-card__tags">eletrônicos em geral, manutenção, vendas</p>
+                  <a href="#" class="shop-card__title">Blue Tech</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor A
+                    Loja 04</p>
+                  <p class="shop-card__tags">eletrônicos em geral, manutenção, vendas</p>
                 </div>
-            </article>
+              </article>
 
-            <!-- CARD 4 -->
-            <article class="shop-card">
+              <!-- CARD 4 -->
+              <article class="shop-card">
                 <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/discovery importados.jpg" alt=""></a>
                 <div class="shop-card__body">
-                <a href="#" class="shop-card__title">Discovery Importados</a>
-                <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor C Loja 142</p>
-                <p class="shop-card__tags">eletrônicos em geral, manutenção, vendas</p>
+                  <a href="#" class="shop-card__title">Discovery Importados</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor C
+                    Loja 142</p>
+                  <p class="shop-card__tags">eletrônicos em geral, manutenção, vendas</p>
                 </div>
-            </article>
+              </article>
             </div>
-        </div>
+          </div> <!--AQUI ACABA -->
 
-        <!-- PÁGINA 2 -->
-        <div class="slider-page">
+          <!-- PÁGINA 2 CELULARES E ACESSORIOS-->
+          <div class="slider-page">
             <div class="cards-row">
-            <article class="shop-card">
+              <article class="shop-card">
+                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/pertson import.jpg" alt="Peterson Imports"></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">Peterson Imports</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Bloco D Loja 139</p>
+                  <p class="shop-card__tags">celulares e acessorios </p>
+                </div>
+              </article>
+
+              <article class="shop-card">
+                <a href="#" class="thumb"><img
+                    src="img/img_da_loja_para_catalago/paraiba_eletronico.jpg" alt="Logo Paraíba Eletrônicos"></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">Paraíba Eletrônicos</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Bloco C Loja 406</p>
+                  <p class="shop-card__tags">cabos, perifericos</p>
+                </div>
+              </article>
+
+              <article class="shop-card">
+                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/jessika import.jpg"
+                    alt="Jessika Import imagem da loja"></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">Jessika Import</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Bloco D Loja 018</p>
+                  <p class="shop-card__tags">capinhas,cabo de carregador, acessorios</p>
+                </div>
+              </article>
+
+              <article class="shop-card">
+                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/autorizada_celular.png" alt=""></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">AN Cell</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt="">Bloco B Loja 114</p>
+                  <p class="shop-card__tags">celulares e acessórios</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- PÁGINA 3 PRODUTO DE BELEZA -->
+          <div class="slider-page">
+            <div class="cards-row">
+              <article class="shop-card">
+                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/wind_costmetico.jpg" alt="Wind Cosméticos logo da loja"></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">Wind Cosméticos</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> CBloco D Loja 78</p>
+                  <p class="shop-card__tags">maquiagem, perfumes , cosmetico </p>
+                </div>
+              </article>
+
+              <article class="shop-card">
+                <a href="#" class="thumb"><img
+                    src="img/img_da_loja_para_catalago/livia_cosmeticos.png" alt="Livia cosmetico logo da loja"></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">Livia cosmetico</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Bloco A Loja 02</p>
+                  <p class="shop-card__tags">higiene e cuidado pessoal</p>
+                </div>
+              </article>
+
+              <article class="shop-card">
+                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/beauty_girls.png"
+                    alt="Beauty Girl Cosméticos logo da loja"></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">Beauty Girl Cosméticos</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Bloco D Lojas 01</p>
+                  <p class="shop-card__tags">maquiagem, cuidados pessoais</p>
+                </div>
+              </article>
+
+              <article class="shop-card">
+                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/isabela_glamouir.jpg" alt="Isabela Glamour logo"></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">Isabela Glamour</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Bloco B Lojas 93</p>
+                  <p class="shop-card__tags">maquiagem, cuidado pessoais</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- PÁGINA 4 SOM AUTOMOTIVO -->
+          <div class="slider-page">
+            <div class="cards-row">
+              <article class="shop-card">
                 <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/fang_imagem.jpg" alt=""></a>
                 <div class="shop-card__body">
-                <a href="#" class="shop-card__title">Fang Peças</a>
-                <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor A Loja 46</p>
-                <p class="shop-card__tags">ferramentas, jogo de peças, ferro solda</p>
+                  <a href="#" class="shop-card__title">Fang Peças</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor A
+                    Loja 46</p>
+                  <p class="shop-card__tags">ferramentas, jogo de peças, ferro solda</p>
                 </div>
-            </article>
+              </article>
 
-            <article class="shop-card">
-                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/WhatsApp-Image-2024-09-10-at-10.33.00.jpeg" alt=""></a>
+              <article class="shop-card">
+                <a href="#" class="thumb"><img
+                    src="img/img_da_loja_para_catalago/WhatsApp-Image-2024-09-10-at-10.33.00.jpeg" alt=""></a>
                 <div class="shop-card__body">
-                <a href="#" class="shop-card__title">RM Acessórios</a>
-                <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor C Loja 118</p>
-                <p class="shop-card__tags">ferramentas, fontes, parafusadeiras</p>
+                  <a href="#" class="shop-card__title">RM Acessórios</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor C
+                    Loja 118</p>
+                  <p class="shop-card__tags">ferramentas, fontes, parafusadeiras</p>
                 </div>
-            </article>
+              </article>
 
-            <article class="shop-card">
-                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/alf variedades e gravacoes.jpg" alt=""></a>
+              <article class="shop-card">
+                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/alf variedades e gravacoes.jpg"
+                    alt=""></a>
                 <div class="shop-card__body">
-                <a href="#" class="shop-card__title">ALF Variedades</a>
-                <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor B Loja 40</p>
-                <p class="shop-card__tags">eletrônicos, manutenção, solda</p>
+                  <a href="#" class="shop-card__title">ALF Variedades</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor B
+                    Loja 40</p>
+                  <p class="shop-card__tags">eletrônicos, manutenção, solda</p>
                 </div>
-            </article>
+              </article>
 
-            <article class="shop-card">
+              <article class="shop-card">
                 <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/ALX ESPORTES.jpg" alt=""></a>
                 <div class="shop-card__body">
-                <a href="#" class="shop-card__title">ALX Esportes</a>
-                <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor D Loja 22</p>
-                <p class="shop-card__tags">esportes, blusas, equipamentos</p>
+                  <a href="#" class="shop-card__title">ALX Esportes</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor D
+                    Loja 22</p>
+                  <p class="shop-card__tags">esportes, blusas, equipamentos</p>
                 </div>
-            </article>
+              </article>
             </div>
-        </div>
-  
-        </div>
-    </div>
+          </div>
 
-        <!-- BOLINHAS -->
-        <div class="slider-dots" id="favDots">
-            <button class="dot is-active" data-i="0" aria-label="Página 1"></button>
-            <button class="dot" data-i="1" aria-label="Página 2"></button>
-            <button class="dot" data-i="1" aria-label="Página 3"></button>
-            <button class="dot" data-i="1" aria-label="Página 4"></button>
+          <!-- PÁGINA 5 FERRAMENTAS -->
+          <div class="slider-page">
+            <div class="cards-row">
+              <article class="shop-card">
+                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/fang_imagem.jpg" alt=""></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">Fang Peças</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor A
+                    Loja 46</p>
+                  <p class="shop-card__tags">ferramentas, jogo de peças, ferro solda</p>
+                </div>
+              </article>
+
+              <article class="shop-card">
+                <a href="#" class="thumb"><img
+                    src="img/img_da_loja_para_catalago/WhatsApp-Image-2024-09-10-at-10.33.00.jpeg" alt=""></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">RM Acessórios</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor C
+                    Loja 118</p>
+                  <p class="shop-card__tags">ferramentas, fontes, parafusadeiras</p>
+                </div>
+              </article>
+
+              <article class="shop-card">
+                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/alf variedades e gravacoes.jpg"
+                    alt=""></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">ALF Variedades</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor B
+                    Loja 40</p>
+                  <p class="shop-card__tags">eletrônicos, manutenção, solda</p>
+                </div>
+              </article>
+
+              <article class="shop-card">
+                <a href="#" class="thumb"><img src="img/img_da_loja_para_catalago/ALX ESPORTES.jpg" alt=""></a>
+                <div class="shop-card__body">
+                  <a href="#" class="shop-card__title">ALX Esportes</a>
+                  <p class="shop-card__meta"><img class="icon-loc" src="img/icones_sites/marker.png" alt=""> Corredor D
+                    Loja 22</p>
+                  <p class="shop-card__tags">esportes, blusas, equipamentos</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
         </div>
+      </div>
+
+      <!-- BOLINHAS -->
+      <div class="slider-dots" id="favDots">
+        <button class="dot is-active" data-i="0" aria-label="Página 1"></button>
+        <button class="dot" data-i="1" aria-label="Página 2"></button>
+        <button class="dot" data-i="1" aria-label="Página 3"></button>
+        <button class="dot" data-i="1" aria-label="Página 4"></button>
+      </div>
     </section>
-</section>
+  </section>
 
 
-<footer class="footer">
-  <div class="container footer-grid">
+  <footer class="footer">
+    <div class="container footer-grid">
 
-    <!-- Logo -->
-    <div class="footer__logo">
-      <img src="img/logo.png" alt="Feira dos Importados de Taguatinga">
-    </div>
+      <!-- Logo -->
+      <div class="footer__logo">
+        <img src="img/logo.png" alt="Feira dos Importados de Taguatinga">
+      </div>
 
-    <!-- Sobre Nós -->
-    <div class="footer__col">
-      <h4>Sobre Nós</h4>
-      <ul>
-        <li><a href="#">Perguntas Frequentes</a></li>
-        <li><a href="#">Nossa História</a></li>
-        <li><a href="#">Nossas Lojas</a></li>
-        <li><a href="#">Política de Privacidade</a></li>
-      </ul>
-    </div>
+      <!-- Sobre Nós -->
+      <div class="footer__col">
+        <h4>Sobre Nós</h4>
+        <ul>
+          <li><a href="#">Perguntas Frequentes</a></li>
+          <li><a href="#">Nossa História</a></li>
+          <li><a href="#">Nossas Lojas</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+      </div>
 
-    <!-- Horário -->
-    <div class="footer__col ">
-      <h4>Horário de Funcionamento</h4>
-      <p>Segunda a Sexta: 08:00 - 18:00</p>
-      <p>Sábado: 08:00 - 18:00</p>
-      <p>Domingo: 08:00 - 16:00</p>
-    </div>
+      <!-- Horário -->
+      <div class="footer__col ">
+        <h4>Horário de Funcionamento</h4>
+        <p>Segunda a Sexta: 08:00 - 18:00</p>
+        <p>Sábado: 08:00 - 18:00</p>
+        <p>Domingo: 08:00 - 16:00</p>
+      </div>
 
-    <!-- Atendimento -->
-    <div class="footer__col">
-      <h4>Atendimento</h4>
-      <div class="footer__contact">
-        <div class="contact-item">
-          <img src="img/icons_do_rodape/o-email.png" alt="ícone email">
-          <a href="contato@feiradosimportados.org.br">contato@feiradosimportados.org.br</a>
-        </div>
-        <div class="contact-item">
-          <img src="img/icons_do_rodape/telefone (1).png" alt="ícone telefone">
-          <span>(61) 3352-5217</span>
-        </div>
-        <div class="contact-item">
-          <img src="img/icons_do_rodape/whatsapp.png" alt="ícone whatsapp">
-          <span>(61) 9 9138-7437</span>
+      <!-- Atendimento -->
+      <div class="footer__col">
+        <h4>Atendimento</h4>
+        <div class="footer__contact">
+          <div class="contact-item">
+            <img src="img/icons_do_rodape/o-email.png" alt="ícone email">
+            <a href="contato@feiradosimportados.org.br">contato@feiradosimportados.org.br</a>
+          </div>
+          <div class="contact-item">
+            <img src="img/icons_do_rodape/telefone (1).png" alt="ícone telefone">
+            <span>(61) 3352-5217</span>
+          </div>
+          <div class="contact-item">
+            <img src="img/icons_do_rodape/whatsapp.png" alt="ícone whatsapp">
+            <span>(61) 9 9138-7437</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Redes sociais -->
-    <div class="footer__social">
-      <h4>Siga a Feira</h4>
-      <div class="social-icons">
-        <a href="#"><img src="img/icons_do_rodape/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="img/icons_do_rodape/social-media.png" alt="Facebook"></a>
+      <!-- Redes sociais -->
+      <div class="footer__social">
+        <h4>Siga a Feira</h4>
+        <div class="social-icons">
+          <a href="#"><img src="img/icons_do_rodape/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="img/icons_do_rodape/social-media.png" alt="Facebook"></a>
+        </div>
       </div>
+
     </div>
 
-  </div>
+    <div class="footer__bottom">
+      © 2025 Feira dos Importados Taguatinga – Todos os direitos reservados
+    </div>
+  </footer>
 
-  <div class="footer__bottom">
-    © 2025 Feira dos Importados Taguatinga – Todos os direitos reservados
-  </div>
-</footer>
-
-<!--Importando arquivo js para dentro do html-->
-<script src="js/script.js"></script>
+  <!--Importando arquivo js para dentro do html-->
+  <script src="js/script.js"></script>
 
 </body>
+
 </html>
