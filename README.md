@@ -93,6 +93,7 @@ Para visualizar e testar o site em sua máquina:
 | 11/10/2025 | Justificativas de Design e Análise de Usabilidade | Ana e Diego | Definição de cores, tipografia e princípios de UX. |
 | 12/10/2025 | Revisão de HTML/CSS (Tags Semânticas, Grid/Flexbox) | Ana e Diego | Implementação da estrutura base e estilos. |
 | 12/10/2025 | **Criação do README Consolidado** | Ana e Diego | Documentação inicial do projeto. |
+| 23/10/2025 | Incluindo novos cards e iniciando codificação com JavaScript | Ana e Diego | Botões, cards e carrossel |
 | 28/10/2025 | Incluindo Modal |Ana e Diego | Editando código HTML, CSS e programando com JavaScript. |
 | 28/10/2025 | **Revisão e Aprimoramento do README** | Ana e Diego | Inclusão de detalhes técnicos e melhoria da estrutura. |
 
