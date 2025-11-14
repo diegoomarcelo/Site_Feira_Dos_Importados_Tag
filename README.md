@@ -278,3 +278,55 @@ Embora os cards também possam virar componentes, nesta etapa seguiremos o míni
 
 ---
 
+## – Etapa 2.2: Criação da Estrutura de Componentes
+
+Após identificar os elementos reutilizáveis, iniciamos a modularização do código HTML criando uma pasta específica para componentes e separando o cabeçalho e o rodapé em arquivos próprios.
+
+### 📁 Criação da pasta `componentes/`
+
+Na raiz do projeto foi criada a pasta:
+
+- `componentes/`
+
+O objetivo dessa pasta é centralizar todos os blocos de interface que serão reutilizados em mais de uma página.
+
+### Separação do `header.html`
+
+No arquivo `index.html`, o bloco correspondente ao cabeçalho (do `<header class="navbar">` até `</header>`) foi recortado e movido para um novo arquivo:
+
+- `componentes/header.html`
+
+Esse arquivo contém apenas o HTML do cabeçalho, sem tags de estrutura global como `<!DOCTYPE>`, `<html>`, `<head>` ou `<body>`.
+
+Nas páginas:
+
+- `index.html`
+- `pagina_loja.html`
+- `pagina_noticias.html`
+
+o cabeçalho original foi substituído por um container:
+
+```html
+<div id="header-container"></div> 
+
+```
+
+### Separação do `footer.html`
+
+Da mesma forma que o header, o bloco do rodapé (do `<footer class="footer">` até `</footer>`) foi movido para o arquivo:
+
+- `componentes/footer.html`
+
+Assim como o header, o arquivo contém apenas o conteúdo do footer, sem tags como `<html>` ou `<body>`.
+
+Nas páginas:
+
+- `index.html`
+- `pagina_loja.html`
+- `pagina_noticias.html`
+
+o rodapé original foi substituído pelo container:
+
+```html
+<div id="footer-container"></div>
+```
