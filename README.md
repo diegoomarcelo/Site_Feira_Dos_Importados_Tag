@@ -102,3 +102,179 @@ Para visualizar e testar o site em sua máquina:
 1. **Desenvolvimento Completo:** Finalizar a codificação de todas as páginas (`pagina_loja.html`, `pagina_noticias.html`) conforme o protótipo.
 2. **Testes de Qualidade:** Realizar testes de usabilidade, acessibilidade (WCAG) e compatibilidade entre navegadores.
 3. **Otimização:** Otimizar a performance (velocidade de carregamento) e a indexação (SEO).
+
+
+## 📘 Parte 2 – Etapa 1: Revisão e Diagnóstico do Projeto Atual
+
+Esta seção registra a revisão do projeto da Parte 1, seguindo o roteiro da disciplina. A partir dessa análise, foram identificados pontos fortes, elementos repetidos, problemas de layout e oportunidades de melhoria para a próxima etapa do desenvolvimento.
+
+---
+
+### O que já está funcionando bem?
+
+- **Estrutura geral**
+  - Projeto dividido em páginas bem definidas: Home (`index.html`), Lojas (`pagina_loja.html`) e Notícias (`pagina_noticias.html`).
+  - Uso consistente de **CSS Grid** e **Flexbox** para organizar o layout.
+  - Identidade visual uniforme, com as cores principais da Feira dos Importados e a fonte Poppins aplicada em todo o site.
+
+- **Conteúdo e Navegação**
+  - Header com logo, navegação e ações principais repetido nas páginas.
+  - Na Home, o conteúdo está organizado em:
+    - **Banner com busca** (formulário de pesquisa principal),
+    - **Seção de categorias em destaque**,
+    - **Carrossel de “Lojas Favoritas da Feira”** com vários cards de lojas.
+  - Página de lojas com campo de busca, seletor de tipo de loja e filtros laterais (categorias e outros).
+  - Página de notícias com um artigo em destaque e vários cards menores de notícias, organizados em grades.
+
+- **Interatividade (JavaScript já implementado)**
+  - Código JavaScript para um **carrossel de lojas favoritas**, usando:
+    - Botões em formato de pílula (`.pill`),
+    - Slides de conteúdo (`.slider-page`),
+    - Dots de navegação (`#favDots .dot`).
+  - Estrutura de **modal de boas-vindas** na Home:
+    - HTML do modal (`#welcome-modal` e `#modal-overlay`),
+    - Estilos específicos no CSS,
+    - Funções no JavaScript para abrir e fechar o modal (via botão, X e clique no fundo).
+
+- **Responsividade inicial**
+  - CSS possui vários breakpoints importantes (`@media (max-width: 1024px)`, `900px`, `768px`, `600px`, `480px`).
+  - Grades de cards e seções como `cats__grid`, `cards-row`, `cards` e `main-grid` se adaptam conforme a largura da tela, reduzindo o número de colunas.
+  - O rodapé (`.footer-grid`) também é ajustado para coluna única em telas menores.
+
+---
+
+### 🔁 Elementos que se repetem e devem virar componentes
+
+Estes elementos se repetem em todas (ou quase todas) as páginas e serão modularizados na Etapa 2:
+
+- **Header completo**
+  - Logo + menu + ações → repetido na Home, Lojas e Notícias.
+- **Menu de navegação**
+  - Links “INICIO”, “LOJAS” e “NOTÍCIAS”.
+- **Footer completo**
+  - Seções “Sobre”, “Informações”, “Atendimento”, horários, contatos e redes sociais.
+- **Estruturas de cards**
+  - Cards de lojas: mesma estrutura visual (imagem, título, localização, tags).
+  - Cards de notícias: estrutura padronizada com imagem, título e resumo.
+  Obs: Embora os cards também tenham estrutura repetida, nesta etapa seguiremos o mínimo obrigatório do roteiro, modularizando apenas o header e o footer.
+
+**Obs:** Embora os cards também tenham estrutura repetida, nesta etapa seguiremos o mínimo obrigatório do roteiro, modularizando apenas o header e o footer.
+
+Esses itens serão transformados em `componentes/header.html` e `componentes/footer.html`, conforme solicitado no roteiro.
+
+---
+
+### ⚠️ Onde o layout “quebra” ou fica estranho?
+
+Durante testes em diferentes tamanhos de tela (principalmente entre **375px e 1024px**), foi possível perceber que ainda existem pontos que precisam de ajustes na responsividade:
+
+- **Header em telas menores**
+  - Dependendo da largura, o conjunto logo + menu + botões pode ficar muito apertado, quebrar de forma não planejada ou perder espaçamento entre os elementos.
+  - Isso prejudica a navegação e a leitura no mobile.
+
+- **Grades de cards (lojas e notícias)**
+  - Em algumas larguras intermediárias, os cards podem:
+    - Ficar com alturas muito diferentes,
+    - Deixar “vazios” visuais na grade,
+    - Deixar o texto mais espremido.
+  - Apesar de funcionarem, visualmente ainda há espaço para melhorar.
+
+- **Espaçamentos verticais no mobile**
+  - Algumas seções ficam muito próximas, o que gera a sensação de conteúdo “colado” e cansa a leitura.
+  - Ajustes de `margin` e `padding` em breakpoints menores ajudariam a dar mais “respiro” entre blocos.
+
+- **Footer em telas pequenas**
+  - O rodapé reúne muitas informações (texto, links, horários, contatos) em um espaço só.
+  - Em telas pequenas, isso torna a leitura mais densa e cansativa.
+
+- **CSS contém regras antigas não usadas**
+  - Há classes definidas no CSS, como `.overlay`, `.banner` e `.search-box`, que não aparecem no HTML atual.
+  - Essas regras parecem vir de versões anteriores da interface e hoje não são utilizadas, deixando o CSS mais difícil de manter.
+
+Essas observações mostram que a responsividade ainda não está finalizada e justificam a necessidade da Etapa 5 (Consolidação da Responsividade).
+
+---
+
+### 💡 Melhorias que fazem diferença real para o usuário
+
+- **Experiência de navegação mais fluida**
+  - A modularização do header e footer vai facilitar manter o site sempre consistente em todas as páginas, o que é essencial para um diretório de lojas.
+
+- **Acessibilidade aprimorada**
+  - Complementar o que já existe com HTML semântico (`<main>`, `<section>`, etc.), foco visível para teclado e labels mais claros em formulários melhora a experiência de pessoas com deficiência ou que navegam só com teclado.
+
+- **Melhor usabilidade no celular**
+  - Ajustes específicos nos grids, cards e header para telas menores deixam a navegação mais confortável, principalmente para quem acessa o site rapidamente pelo celular dentro da própria feira.
+
+- **Código mais limpo e profissional**
+  - Modularizar componentes e remover CSS que não está sendo usado reduz a chance de erro, facilita futuras alterações e torna o projeto mais profissional.
+
+- **Imagem mais confiável para o pequeno negócio**
+  - Um site organizado, responsivo e agradável transmite mais seriedade e ajuda a fortalecer a presença digital da Feira dos Importados de Taguatinga.
+
+## Etapa 2.1: Identificação de Componentes Reutilizáveis
+
+Antes de iniciar a modularização, analisamos cuidadosamente todas as páginas do projeto (`index.html`, `pagina_loja.html` e `pagina_noticias.html`) para identificar quais elementos se repetem e podem ser convertidos em componentes reutilizáveis. Essa etapa segue o objetivo do roteiro: reduzir repetição, facilitar manutenção e centralizar elementos estruturais.
+
+Após a análise, foram identificados os seguintes componentes:
+
+---
+
+### ✔️ 1. Header (cabeçalho completo)
+O header está presente nas 3 páginas do site, sempre com a mesma estrutura:
+
+- Logo da Feira dos Importados  
+- Menu principal (INICIO, LOJAS, NOTÍCIAS)  
+- Botões/ações adicionais  
+
+Embora cada página tenha pequenas variações visuais, a estrutura principal do header permanece a mesma, o que torna esse elemento ideal para ser modularizado.
+
+**Por que modularizar?**  
+Facilita a manutenção: ao alterar um link, logo ou ação, a mudança automaticamente se reflete em todo o site.
+
+---
+
+### ✔️ 2. Menu de Navegação (nav)
+A navegação principal é sempre igual:
+
+- Links: **INICIO**, **LOJAS**, **NOTÍCIAS**
+- Organização em lista
+- Mesmas classes CSS e estrutura HTML
+
+Embora faça parte do header, registramos como item separado porque é um componente essencial para a navegabilidade.
+
+**Por que modularizar?**
+Garantir consistência e evitar divergências entre páginas.
+
+---
+
+### ✔️ 3. Footer (rodapé completo)
+O rodapé contém:
+
+- Logo e nome da feira  
+- Informações institucionais  
+- Contatos e horários  
+- Seções “Sobre”, “Informações” e “Atendimento”  
+- Ícones e links de redes sociais  
+
+Essa estrutura aparece de forma idêntica nas 3 páginas.
+
+**Por que modularizar?**  
+Assim como o header, ele é grande e repetitivo; manter três versões diferentes pode gerar erros e inconsistências.
+
+---
+
+### ✔️ 4. Estruturas de Cards
+Tanto na Home quanto nas páginas internas, existem dois padrões de cards:
+
+- **Cards de Lojas**  
+  Estrutura repetida com imagem, título, localização, tags e layout consistente.
+
+- **Cards de Notícias**  
+  Com imagem, título e resumo, seguindo a mesma lógica estrutural.
+
+**Observação:**  
+Embora os cards também possam virar componentes, nesta etapa seguiremos o mínimo solicitado no roteiro — modularizando apenas **header** e **footer**. Os cards serão tratados como possível melhoria futura.
+
+---
+
