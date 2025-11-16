@@ -156,7 +156,7 @@ Estes elementos se repetem em todas (ou quase todas) as páginas e serão modula
 - **Estruturas de cards**
   - Cards de lojas: mesma estrutura visual (imagem, título, localização, tags).
   - Cards de notícias: estrutura padronizada com imagem, título e resumo.
-  Obs: Embora os cards também tenham estrutura repetida, nesta etapa seguiremos o mínimo obrigatório do roteiro, modularizando apenas o header e o footer.
+ 
 
 **Obs:** Embora os cards também tenham estrutura repetida, nesta etapa seguiremos o mínimo obrigatório do roteiro, modularizando apenas o header e o footer.
 
@@ -330,3 +330,236 @@ o rodapé original foi substituído pelo container:
 ```html
 <div id="footer-container"></div>
 ```
+
+## Etapa 2.3: Carregamento dos Componentes com JavaScript
+
+Com o `header.html` e o `footer.html` já separados na pasta `componentes/`, criamos um arquivo JavaScript simples para carregar esses componentes automaticamente em todas as páginas.
+
+### 📄 Arquivo `js/componentes.js`
+
+Criamos um arquivo chamado `componentes.js` dentro da pasta `js/`, contendo a função responsável por buscar o HTML dos componentes e inserir dentro dos containers:
+
+```js
+function carregarComponente(caminho, seletor) {
+  fetch(caminho)
+    .then(response => response.text())
+    .then(html => {
+      document.querySelector(seletor).innerHTML = html;
+    })
+    .catch(error => {
+      console.log("Erro ao carregar componente:", error);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  carregarComponente("componentes/header.html", "#header-container");
+  carregarComponente("componentes/footer.html", "#footer-container");
+});
+```
+
+## Etapa 3: Aprimoramento da Interatividade
+
+Nesta etapa foram revisados os recursos de interatividade já existentes no projeto e adicionadas novas funcionalidades simples e úteis para melhorar a experiência do usuário. O foco foi manter o código organizado e acessível, sem complexidade desnecessária.
+
+---
+
+### Revisão do JavaScript Existente (Modal e Carrossel)
+
+O arquivo `script.js` foi reorganizado para garantir que o modal e o carrossel funcionem corretamente em todas as páginas.
+
+- O **modal de boas-vindas** agora:
+  - Abre automaticamente após 1 segundo,
+  - Pode ser fechado pelo botão “Entrar”, pelo “X” ou clicando fora da área do modal,
+  - Foi ajustado para não gerar erros em páginas onde ele não existe.
+
+- O **carrossel de lojas favoritas**:
+  - Teve seus eventos revisados,
+  - Teve o controle de slides e “dots” reorganizado,
+  - Teve código redundante removido.
+
+---
+
+### Botão “Voltar ao Topo”
+
+Foi adicionado um botão fixo no canto inferior direito da tela, que aparece automaticamente quando o usuário rola a página para baixo.
+
+#### HTML inserido:
+
+```html
+<button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+  ↑
+</button>
+```
+
+### 🎨 CSS do Botão “Voltar ao Topo”
+
+```css
+.back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--teal);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.back-to-top.show {
+  display: flex;
+}
+```
+
+### JavaScript do Botão “Voltar ao Topo”
+```js
+
+const backToTopBtn = document.getElementById("back-to-top");
+
+if (backToTopBtn) {
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+``` 
+
+Benefício: melhora a navegação em páginas mais extensas, como Lojas e Notícias.
+
+### 3. Validação dos Campos de Busca
+
+Foram implementadas validações simples para impedir buscas vazias.
+
+#### Página Inicial (Home)
+```js
+const heroForm = document.querySelector(".hero__search");
+
+if (heroForm) {
+  heroForm.addEventListener("submit", function (event) {
+    const input = heroForm.querySelector("input[name='q']");
+    if (input.value.trim() === "") {
+      event.preventDefault();
+      alert("Por favor, preencha o campo de busca antes de pesquisar.");
+      input.focus();
+    }
+  });
+}
+```
+#### Página de Lojas
+```js
+const lojaSearchInput = document.querySelector(".searchband #q");
+
+if (lojaSearchInput) {
+  lojaSearchInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" && lojaSearchInput.value.trim() === "") {
+      event.preventDefault();
+      alert("Por favor, preencha o campo de busca antes de pesquisar.");
+      lojaSearchInput.focus();
+    }
+  });
+}
+```
+Benefício: evita pesquisas vazias e melhora a experiência do usuário.
+
+## Etapa 4: Consolidação da Acessibilidade
+
+Nesta etapa, foram realizados ajustes específicos para melhorar a acessibilidade do site, seguindo o checklist proposto no roteiro da disciplina. O objetivo foi garantir que o conteúdo possa ser utilizado por diferentes tipos de usuários, incluindo aqueles que navegam por teclado ou utilizam leitores de tela.
+
+---
+
+### 4.1 Ajustes na Estrutura Semântica
+
+Foram feitas correções na hierarquia de títulos e na estrutura semântica das páginas:
+
+- Definição de **apenas um `<h1>` por página**, representando o título principal:
+  - Na Home, o título principal agora está na seção de destaque (hero).
+  - Na página de Lojas, o texto “Todas as Lojas FIT” foi promovido a `<h1>`.
+  - Na página de Notícias, foi definido um `<h1>` representando o título principal da página.
+- O `<h1>` que estava dentro do modal foi alterado para `<h2>`, evitando conflito de hierarquia.
+- O `<title>` da página inicial foi atualizado para representar corretamente o conteúdo principal da Home.
+
+**Benefício:** melhora a navegação por leitores de tela e organiza a estrutura lógica do documento.
+
+---
+
+### 4.2 Textos Alternativos em Imagens (ALT)
+
+As imagens do projeto foram revisadas com foco nos atributos `alt`:
+
+- Imagens de **conteúdo** (como fotos de lojas e notícias) receberam descrições significativas no atributo `alt`.
+- Ícones **decorativos** passaram a usar `alt=""` junto com `aria-hidden="true"`, permitindo que leitores de tela os ignorem.
+- Nas páginas de Lojas e Notícias, foram ajustadas as descrições das imagens para que façam sentido fora do contexto visual.
+
+**Benefício:** pessoas com deficiência visual recebem informações relevantes sem poluição sonora desnecessária.
+
+---
+
+### 4.3 Melhorias em Formulários
+
+Para tornar os formulários mais claros e acessíveis:
+
+- Foram adicionados atributos **`aria-label`** em campos de busca que não possuíam texto de label visível, como:
+  - Campo de busca da faixa azul na página de Lojas.
+  - Campo de busca na área lateral da página de Notícias.
+- A estrutura de `<label>` envolvendo inputs foi mantida, garantindo associação correta entre rótulos e campos, quando aplicável.
+
+**Benefício:** leitores de tela conseguem anunciar claramente a função de cada campo de formulário.
+
+---
+
+### 4.4 Foco Visível na Navegação por Teclado
+
+Foi adicionado um estilo de foco visível para elementos interativos, facilitando a navegação por teclado:
+
+```css
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #00B8C9;
+  outline-offset: 3px;
+}
+``` 
+### 4.5 Ajustes em Links e Navegação
+
+No rodapé, o link de e-mail passou a utilizar o formato mailto:, por exemplo:
+
+```html
+<a href="mailto:contato@feiradosimportados.org.br">contato@feiradosimportados.org.br</a>
+```
+
+- Na página de Notícias, foi removida a estrutura de <button> envolvendo <a>, substituindo por um único elemento clicável, evitando redundância e melhorando a semântica.
+
+**Benefício:** melhora a usabilidade e evita confusão para leitores de tela e usuários de teclado.
+
+## 4.6 Testes com Lighthouse
+
+Após aplicar todas as correções, o site foi analisado utilizando o **Lighthouse** (Chrome DevTools), avaliando apenas o critério de **Acessibilidade**.  
+A pontuação obtida foi:
+
+### ⭐ **90 / 100**
+
+Os testes verificaram os seguintes aspectos:
+
+- Hierarquia correta de títulos (h1, h2, h3),
+- Textos alternativos nas imagens,
+- Navegação por teclado funcionando adequadamente,
+- Elementos interativos com foco visível,
+- Links e rótulos devidamente identificados.
+
+O relatório apontou uma **melhora significativa** na pontuação após os ajustes aplicados, indicando que o site está bem alinhado com as boas práticas de acessibilidade.

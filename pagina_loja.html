@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  
+
   <div id="header-container"></div>
 
 
@@ -29,14 +29,14 @@
     <div class="container search-row ">
       <!-- Campo 1: texto -->
       <label class="input" for="q">
-        <img class="input__icon" src="img/icones_sites/running.png" alt="icone de tenis  " aria-hidden="true">
-        <input id="q" type="search" placeholder="Loja, produto ou serviço">
+        <img class="input__icon" src="img/icones_sites/running.png" alt="" aria-hidden="true">
+        <input id="q" type="search" placeholder="Loja, produto ou serviço" aria-label="Buscar loja, produto ou serviço">
       </label>
 
       <!-- Campo 2: selecao -->
       <label class="input" for="tipo">
         <img class="input__icon" src="img/icones_sites/options-lines.png" alt="" aria-hidden="true">
-        <select id="tipo">
+        <select id="tipo" aria-label="Filtrar por tipo de loja">
           <option selected>Qual tipo de loja?</option>
           <option>Eletrônicos</option>
           <option>Moda e Acessórios</option>
@@ -98,20 +98,20 @@
 
         <!-- Cabeçalho da listagem -->
         <div class="listing__header">
-          <h2 class="listing__title">Todas as Lojas FIT</h2>
+          <h1 class="listing__title">Todas as Lojas FIT</h2>
 
-          <div class="sort">
-            <span class="sort__label">Ordenador por:</span>
-            <div class="select-wrap">
-              <select>
-                <option>Mais relevante</option>
-                <option>Nome (A–Z)</option>
-                <option>Corredor</option>
-              </select>
-              <img class="select-caret" src="img/icones_sites/seta-para-baixo.png" alt="seta para baixo"
-                aria-hidden="true">
+            <div class="sort">
+              <span class="sort__label">Ordenador por:</span>
+              <div class="select-wrap">
+                <select>
+                  <option>Mais relevante</option>
+                  <option>Nome (A–Z)</option>
+                  <option>Corredor</option>
+                </select>
+                <img class="select-caret" src="img/icones_sites/seta-para-baixo.png" alt="seta para baixo"
+                  aria-hidden="true">
+              </div>
             </div>
-          </div>
         </div>
 
         <!-- Grade de cards -->
@@ -270,8 +270,16 @@
     </div>
   </main>
 
- <div id="footer-container"></div>
+  <!-- Botão Voltar ao topo -->
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+    ↑
+  </button>
 
+  <div id="footer-container"></div>
+
+  <!--Importando arquivo js para dentro do html-->
+  <script src="js/componentes.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 

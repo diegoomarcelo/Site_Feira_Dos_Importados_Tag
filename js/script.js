@@ -1,61 +1,123 @@
-// Espera o HTML carregar completamente antes de rodar o código
-document.addEventListener("DOMContentLoaded", () => {
-  const pills  = document.querySelectorAll(".pill");
+document.addEventListener("DOMContentLoaded", function () {
+  // =========================
+  // CARROSSEL - Lojas Favoritas
+  // =========================
+  const pills = document.querySelectorAll(".pill");
   const slides = document.querySelectorAll(".slider-page");
-  const dots   = document.querySelectorAll("#favDots .dot");
+  const dots = document.querySelectorAll("#favDots .dot");
 
-// Função responsável por mostrar o slide certo e atualizar o botão ativo
-  function goTo(index) {
-    if (index < 0) index = 0;
-    if (index >= slides.length) index = slides.length - 1;
+  function mostrarSlide(indice) {
+    if (slides.length === 0) return;
 
-    // Função responsável por mostrar o slide certo e atualizar o botão ativo
-    pills.forEach(p => p.classList.remove("is-active"));
-    slides.forEach(s => s.classList.remove("is-active"));
-    dots.forEach(d => d.classList.remove("is-active"));
+    if (indice < 0) indice = 0;
+    if (indice >= slides.length) indice = slides.length - 1;
 
-    // Adiciona o estado "ativo" apenas no botão, slide e bolinha correspondentes ao índice clicado
-    pills[index]?.classList.add("is-active");
-    slides[index]?.classList.add("is-active");
-    dots[index]?.classList.add("is-active");
+    slides.forEach(function (slide, i) {
+      slide.classList.toggle("is-active", i === indice);
+    });
+
+    pills.forEach(function (pill, i) {
+      pill.classList.toggle("is-active", i === indice);
+    });
+
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle("is-active", i === indice);
+    });
   }
 
-  pills.forEach((pill, i) => pill.addEventListener("click", () => goTo(i)));
-  dots.forEach((dot, i)  => dot.addEventListener("click",  () => goTo(i)));
+  pills.forEach(function (pill, i) {
+    pill.addEventListener("click", function () {
+      mostrarSlide(i);
+    });
+  });
 
-  // mostra a primeira página antes de qualquer clique
-  goTo(0);
-});
-/* --- JavaScript para controlar o Modal --- */
+  dots.forEach(function (dot) {
+    dot.addEventListener("click", function () {
+      const indice = Number(dot.dataset.i);
+      mostrarSlide(indice);
+    });
+  });
 
-// Espera o documento inteiro carregar (boa prática)
-document.addEventListener('DOMContentLoaded', () => {
+  // =========================
+  // MODAL de boas-vindas
+  // =========================
+  const modal = document.getElementById("welcome-modal");
+  const overlay = document.getElementById("modal-overlay");
+  const closeBtn = document.getElementById("modal-close-btn");
+  const enterBtn = document.getElementById("enter-site-btn");
 
-    // 1. Seleciona os elementos do DOM
-    const modal = document.getElementById('welcome-modal');
-    const overlay = document.getElementById('modal-overlay');
-    const closeBtn = document.getElementById('modal-close-btn');
-    const enterBtn = document.getElementById('enter-site-btn');
+  if (modal && overlay && closeBtn && enterBtn) {
+    function abrirModal() {
+      modal.classList.add("show");
+      overlay.classList.add("show");
+    }
 
-    // 2. Função para ABRIR o modal
-    const openModal = () => {
-        modal.classList.add('show');
-        overlay.classList.add('show');
-    };
+    function fecharModal() {
+      modal.classList.remove("show");
+      overlay.classList.remove("show");
+    }
 
-    // 3. Função para FECHAR o modal
-    const closeModal = () => {
-        modal.classList.remove('show');
-        overlay.classList.remove('show');
-    };
+    closeBtn.addEventListener("click", fecharModal);
+    enterBtn.addEventListener("click", fecharModal);
+    overlay.addEventListener("click", fecharModal);
 
-    // 4. Adiciona os "escutadores" de eventos
-    closeBtn.addEventListener('click', closeModal); // Clicar no 'X'
-    enterBtn.addEventListener('click', closeModal); // Clicar em 'Entrar'
-    overlay.addEventListener('click', closeModal);  // Clicar no fundo
+    // Abre o modal 1 segundo depois da página carregar
+    setTimeout(abrirModal, 1000);
+  }
 
-    // 5. ABRE O MODAL AUTOMATICAMENTE
-    // Espera 1 segundo (1000ms) após a página carregar para mostrar o modal
-    setTimeout(openModal, 1000);
+
+  // =========================
+  // Botão "Voltar ao topo"
+  // =========================
+  const backToTopBtn = document.getElementById("back-to-top");
+
+  if (backToTopBtn) {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+
+    backToTopBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+
+  // =========================
+  // Validação simples do formulário de busca (Home)
+  // =========================
+  const heroForm = document.querySelector(".hero__search");
+
+  if (heroForm) {
+    heroForm.addEventListener("submit", function (event) {
+      const input = heroForm.querySelector("input[name='q']");
+
+      if (input && input.value.trim() === "") {
+        event.preventDefault();
+        alert("Por favor, preencha o campo de busca antes de pesquisar.");
+        input.focus();
+      }
+    });
+  }
+
+  // =========================
+  // Validação da busca - Página LOJAS
+  // =========================
+  const lojaSearchInput = document.querySelector(".searchband #q");
+
+  if (lojaSearchInput) {
+    lojaSearchInput.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" && lojaSearchInput.value.trim() === "") {
+        event.preventDefault();
+        alert("Por favor, preencha o campo de busca antes de pesquisar.");
+        lojaSearchInput.focus();
+      }
+    });
+  }
 
 });
