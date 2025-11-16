@@ -563,3 +563,106 @@ Os testes verificaram os seguintes aspectos:
 - Links e rótulos devidamente identificados.
 
 O relatório apontou uma **melhora significativa** na pontuação após os ajustes aplicados, indicando que o site está bem alinhado com as boas práticas de acessibilidade.
+
+## Etapa 5: Consolidação da Responsividade
+
+Nesta etapa, fizemos ajustes no layout para garantir que o site funcionasse bem em diferentes tamanhos de tela, conforme sugerido no roteiro: **mobile (375px)**, **tablet (768px)** e **desktop (1280px e 1920px)**.  
+Os testes foram feitos usando o DevTools do Chrome, e a partir deles identificamos pontos que precisavam de ajustes no CSS.
+
+---
+
+### 5.1 Revisão do layout em diferentes dispositivos
+
+Durante os testes, observamos o seguinte:
+
+- **Mobile – 375px (iPhone)**  
+  - O banner da Home ficou bem adaptado, com o formulário de busca empilhado.  
+  - O modal abriu de forma adequada, com boa legibilidade.  
+  - As listas de lojas e notícias passaram a exibir apenas **1 card por linha**, deixando o conteúdo mais fácil de visualizar.  
+  - O rodapé foi reorganizado automaticamente para apenas uma coluna.
+
+- **Tablet – 768px (iPad)**  
+  - Foi onde percebemos o maior problema inicialmente: o cabeçalho estava desalinhado e com muito espaço.  
+  - Ajustamos o header para distribuir melhor logo, menu e ações, permitindo que eles ocupem até duas linhas quando necessário.  
+  - As grades de cards passaram a funcionar corretamente, exibindo 2 ou 3 colunas conforme o espaço disponível.
+
+- **Desktop – 1280px e 1920px**  
+  - O layout se manteve estável, com as seções bem distribuídas.  
+  - Os cards de lojas e notícias aproveitaram bem o espaço horizontal.
+
+Esses testes ajudaram a identificar onde o layout quebrava e onde era necessário reorganizar elementos para melhorar a experiência.
+
+---
+
+### 5.2 Ajustes com Media Queries
+
+Os ajustes de responsividade foram feitos no arquivo `styles.css`, usando media queries para adaptar o layout em diferentes larguras.
+
+#### 🔹 Cabeçalho e menu
+
+O cabeçalho foi um dos pontos que mais precisou de atenção:
+
+- A altura fixa foi removida para evitar espaços desnecessários.  
+- No breakpoint de **768px**, reorganizamos o header para ele poder ocupar duas linhas, garantindo que a logo, o menu e as ações não ficassem espremidos.  
+- No **mobile (600px)**, deixamos os elementos empilhados e centralizados, deixando o topo mais limpo.
+
+**Resultado:** o cabeçalho deixou de quebrar visualmente e passou a se adaptar melhor no tablet e no celular.
+
+---
+
+#### 🔹 Formulário da Home
+
+O formulário do banner usava 3 colunas fixas e ficava muito apertado no celular.  
+Por isso:
+
+- Em telas menores, ele passou a usar apenas **1 coluna**, deixando os campos empilhados.  
+- O botão “Buscar” passou a ocupar a largura inteira.
+
+**Resultado:** o formulário ficou mais acessível e confortável de usar no mobile.
+
+---
+
+#### 🔹 Faixa de busca da página de Lojas
+
+Na página de Lojas, a faixa azul com a busca e o filtro também estava apertada no mobile.  
+Ajustamos:
+
+- O container `.search-row` para ficar em **coluna** em telas menores.
+
+**Resultado:** os campos ficaram mais claros e fáceis de preencher.
+
+---
+
+#### 🔹 Grades de cards
+
+As grades de cards funcionam agora assim:
+
+- Em telas grandes → várias colunas  
+- Em tablets → quantidade reduzida  
+- Em celulares → apenas 1 coluna
+
+Isso ajuda a manter a leitura confortável em qualquer dispositivo.
+
+---
+
+#### 🔹 Footer
+
+O rodapé se adapta automaticamente:
+
+- Em telas grandes → várias colunas  
+- Em telas menores → reduzido para 2 colunas  
+- No mobile → apenas 1 coluna
+
+---
+
+### Resumo da Etapa 5
+
+- Testamos o layout em 375px, 768px, 1280px e 1920px.  
+- Ajustamos o cabeçalho para melhorar o comportamento no tablet e no celular.  
+- O formulário da Home foi reorganizado para o mobile.  
+- A faixa de busca da página de Lojas foi ajustada para telas pequenas.  
+- As grades de cards foram adaptadas para diferentes larguras.  
+- O footer foi reorganizado conforme a tela diminuía.
+
+Essas melhorias deixaram o site mais confortável de navegar e garantiram que ele funcionasse bem em diferentes dispositivos.
+

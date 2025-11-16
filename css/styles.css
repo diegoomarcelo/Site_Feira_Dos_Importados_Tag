@@ -1248,14 +1248,52 @@ textarea:focus {
 
 /* ===== até 768px (mobile grande) ===== */
 @media (max-width: 768px) {
-  /* Header */
+
+  
+  .nav-grid {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 16px;
+    row-gap: 8px;
+    height: auto;
+    padding: 8px 0;
+    align-items: center;
+  }
+
   .logo img { 
     height: 64px; 
     width: 64px; 
   }
+
+
+ .menu {
+    grid-column: 1 / -1;
+    justify-content: center;
+    gap: 24px;
+  }
+
+
+  .menu__link {
+    font-size: 14px;
+    padding-inline: 8px;
+  }
+
+ /* Ações podem quebrar linha se precisar */
+  .actions {
+    grid-column: 1 / -1;   /* garante que as ações também fiquem na linha inteira */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
   .btn-pill { 
     padding: 12px 22px; 
     font-size: 15px; 
+  }
+
+  .act {
+    font-size: 14px;
+    white-space: normal; /* deixa o texto quebrar */
   }
 
   /* Banner / herói */
@@ -1294,6 +1332,21 @@ textarea:focus {
     height: 160px; 
   }
 
+  /* Hero: formulário em coluna no mobile */
+  .hero__search {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__btn {
+    width: 100%;
+  }
+
+
+  .search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   /* Notícias */
   .main-grid { 
     grid-template-columns: 1fr; 
@@ -1315,13 +1368,8 @@ textarea:focus {
 
 /* ===== até 600px (mobile comum) ===== */
 @media (max-width: 600px) {
-  /* Hide menu (você já fazia isso) e ajusta logo */
-  .menu { 
-    display: none; 
-  }
-  .logo img { 
-    height: 48px; 
-    width: 48px; 
+  .hero {
+    padding-top: 24px;   /* reduz o espaço no topo do hero */
   }
 
   /* Títulos gerais */
@@ -1354,6 +1402,42 @@ textarea:focus {
   /* Notícias */
   .news-card img { 
     height: 160px; 
+  }
+
+  .navbar {
+    padding: 8px 16px;      /* diminui a altura do header */
+  }
+
+  .nav-grid {
+    display: flex;          /* em coluna */
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;           /* diminui o espaço entre logo, ações e menu */
+    column-gap: 0;
+    height: auto;           /* garante que não fique preso em uma altura grande */
+  }
+
+  .logo {
+    justify-self: center;
+  }
+
+  .menu {
+    display: none; ;
+  }
+
+  .actions {
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .act {
+    font-size: 14px;
+    white-space: normal;    /* deixa o texto quebrar se precisar */
+  }
+
+  .btn-pill {
+    padding: 6px 14px;
+    font-size: 14px;
   }
 }
 
@@ -1396,6 +1480,12 @@ textarea:focus {
   }
   .thumb img { 
     height: 150px;
+  }
+
+  .input__icon {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
   }
 
   /* Notícias */
