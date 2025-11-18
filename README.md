@@ -1,10 +1,12 @@
 
 # Modernização do Site da Feira dos Importados de Taguatinga
 
+
 > **Observação**  
 > Como o header e o footer estão sendo carregados via JavaScript usando `fetch()`, alguns navegadores não mostram essas partes quando o arquivo é aberto diretamente (via `file://`).  
 > Para visualizar o site completo, é necessário abrir o projeto usando um servidor local, como o **Live Server** no VS Code ou acessar pelo **GitHub Pages**.  
 > Isso é normal nesse tipo de estrutura modular e faz parte da forma como o navegador trata requisições de arquivos locais.
+
 
 
 ## Visão Geral do Projeto
