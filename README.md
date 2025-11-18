@@ -673,6 +673,9 @@ Para enriquecer a experiência do usuário e fornecer canais de comunicação es
 * Foi incorporado um mapa interativo do Google Maps diretamente no rodapé do site.
 * Esta funcionalidade utiliza um `<iframe>` para exibir a localização exata da Feira dos Importados, permitindo que os usuários visualizem o endereço e obtenham rotas facilmente.
 
+  <img width="1278" height="229" alt="image" src="https://github.com/user-attachments/assets/65766c10-a105-4320-84a9-e452b6bcbe74" />
+
+
 ---
 
 ### 6.2. Botão de WhatsApp (Contato Direto)
@@ -680,6 +683,9 @@ Para enriquecer a experiência do usuário e fornecer canais de comunicação es
 * Foi implementado um botão flutuante (FAB - Floating Action Button) que permanece fixo no canto da tela.
 * Este botão contém um link `wa.me` que direciona o usuário para uma conversa direta no WhatsApp, facilitando o contato imediato.
 * O botão é controlado por JavaScript para aparecer suavemente apenas após o usuário rolar a página, mantendo a interface limpa.
+
+<img width="1303" height="141" alt="image" src="https://github.com/user-attachments/assets/ee4ebafe-d26e-48c5-9ee7-112d44389a9d" />
+
 
 ---
 
@@ -690,12 +696,17 @@ Para enriquecer a experiência do usuário e fornecer canais de comunicação es
 * O formulário envia os dados diretamente para o endpoint do Formspree, que os valida e encaminha para o email do administrador.
 * Utilizamos JavaScript (AJAX) para uma submissão assíncTrona, que exibe mensagens de sucesso ou erro na própria página, sem a necessidade de recarregar.
 
+  <img width="1021" height="546" alt="image" src="https://github.com/user-attachments/assets/d1891052-1f2c-4b53-96b9-6a00274ddc4a" />
+
 ---
 
 ### 6.4. Redes Sociais (Links e Ícones)
 
 * Para conectar o site às redes sociais da empresa, foram adicionados ícones de Instagram e Facebook no rodapé.
 * Estes ícones funcionam como links diretos (`<a>`) para os perfis oficiais, incentivando os usuários a seguirem a feira e aumentando o engajamento.
+
+  <img width="1155" height="232" alt="image" src="https://github.com/user-attachments/assets/dfb59c4a-ca79-4360-aa9d-05fdeaaf4c6c" />
+
 ---
 
 ## Etapa 7: Organização Final e Documentação
@@ -751,3 +762,43 @@ Este próprio documento (`README.md`) foi atualizado para servir como a document
 * A documentação das novas integrações externas (Google Maps, WhatsApp, Formspree e Redes Sociais).
 
 Manter o `README.md` atualizado garante que qualquer pessoa que acesse o repositório entenda imediatamente o escopo, os objetivos e o estado atual do projeto.
+
+---
+
+## 8. Autoavaliação com Rubrica
+
+Esta seção apresenta a autoavaliação do projeto com base em critérios técnicos de desenvolvimento web, seguida de uma reflexão sobre o aprendizado e os próximos passos.
+
+### 8.1. Preenchimento da Rubrica
+
+Abaixo, a avaliação do projeto considerando os requisitos funcionais e não-funcionais.
+
+| Critério | Nota (1-5) | Justificativa e Evidências |
+| :--- | :---: | :--- |
+| **Estrutura HTML (Semântica)** | **5 (Excelente)** | O código utiliza tags semânticas apropriadas (`<header>`, `<nav>`, `<main>`, `<footer>`, `<section>`) em vez de apenas `<div>`. A hierarquia de títulos (`h1` a `h4`) foi corrigida para garantir a ordem lógica do documento. |
+| **Estilização CSS (Layout)** | **5 (Excelente)** | Uso consistente de **Flexbox** e **CSS Grid** para estruturar o layout. O site possui uma identidade visual coesa (cores, tipografia Poppins) e o CSS está organizado e comentado. |
+| **Responsividade** | **5 (Excelente)** | O site se adapta fluidamente a dispositivos móveis (375px), tablets (768px) e desktops. Foram utilizados *media queries* para ajustar o menu, as grades de cards e o formulário em diferentes resoluções. |
+| **Interatividade (JavaScript)** | **5 (Excelente)** | Implementação avançada de carregamento dinâmico de componentes (`header`/`footer`) via `fetch`. Funcionalidades como Modal, Carrossel, Botão "Voltar ao Topo" e integração com Formspree funcionam sem erros de console. |
+| **Acessibilidade** | **4 (Muito Bom)** | O site atinge pontuação alta no Lighthouse (90+). Possui foco visível para navegação por teclado, atributos `alt` em imagens e `aria-labels` em formulários. |
+| **Organização do Código** | **5 (Excelente)** | Estrutura de pastas clara (`css/`, `js/`, `img/`, `componentes/`). Nomes de classes e IDs são descritivos e seguem um padrão lógico. O repositório Git está limpo e bem documentado. |
+
+---
+
+### 8.2. Reflexão e Plano de Melhorias
+
+#### Reflexão sobre o Aprendizado
+O desenvolvimento deste projeto foi um marco importante na aplicação prática de conceitos de Front-End.
+
+* **Desafios Superados:** A maior dificuldade encontrada foi o gerenciamento de cache do navegador durante a estilização do `footer`, que exigiu o uso de recarregamento forçado e ajustes precisos nas media queries para garantir que o mapa e as colunas não quebrassem em telas menores.
+* **Conquistas Técnicas:** A modularização do `header` e do `footer` utilizando JavaScript (`fetch`) foi um grande avanço, permitindo uma manutenção muito mais eficiente do código, simulando o comportamento de frameworks modernos (como React ou Vue) usando apenas JavaScript puro (Vanilla JS).
+* **Integrações:** Aprender a integrar serviços externos sem a necessidade de um Back-End complexo (usando Formspree para e-mails e API do Google Maps) mostrou como é possível entregar valor real ao cliente com ferramentas acessíveis.
+
+#### Plano de Melhorias (Próximos Passos)
+Apesar de o projeto estar funcional e robusto, identificamos pontos para evolução futura:
+
+1.  **Performance de Imagens:** Implementar formatos de imagem mais modernos e atributos `loading="lazy"` nos cards de lojas para acelerar o carregamento inicial.
+2.  **Modularização dos Cards:** Conforme identificado na Etapa 2.1, os "Cards de Lojas" e "Cards de Notícias" ainda estão repetidos no HTML. O próximo passo lógico seria transformá-los em componentes gerados dinamicamente por JavaScript através de um arquivo JSON (array de objetos), reduzindo drasticamente o tamanho do HTML.
+3.  **SEO (Search Engine Optimization):** Adicionar meta tags *Open Graph* para que os links do site fiquem bonitos quando compartilhados no WhatsApp e redes sociais.
+4.  Melhorar e deixar o menu mais moderno e estético.
+5.  Incrementar o login.
+6.  Outros que acharmos pertinentes.
