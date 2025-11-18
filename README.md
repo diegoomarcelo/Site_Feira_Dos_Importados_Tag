@@ -68,7 +68,6 @@ Para visualizar e testar o site em sua máquina:
 3. **Abra no Navegador:**
    Abra o arquivo `index.html` diretamente no seu navegador de preferência (Chrome, Firefox, etc.).
 
-## Histórico de Desenvolvimento 
 
 ## Histórico de Desenvolvimento 
 
