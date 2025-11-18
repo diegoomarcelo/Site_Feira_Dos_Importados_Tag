@@ -765,7 +765,7 @@ Manter o `README.md` atualizado garante que qualquer pessoa que acesse o reposit
 
 ---
 
-## 8. Autoavaliação com Rubrica
+## Etapa 8: Autoavaliação com Rubrica
 
 Esta seção apresenta a autoavaliação do projeto com base em critérios técnicos de desenvolvimento web, seguida de uma reflexão sobre o aprendizado e os próximos passos.
 
@@ -802,3 +802,31 @@ Apesar de o projeto estar funcional e robusto, identificamos pontos para evoluç
 4.  Melhorar e deixar o menu mais moderno e estético.
 5.  Incrementar o login.
 6.  Outros que acharmos pertinentes.
+
+---
+
+## Etapa 9: Revisão Final e Testes
+
+### Checklist de Validação
+
+- [x] **Todos os componentes estão modularizados e funcionando?**
+  - *Sim. Header e Footer separados e carregados via JavaScript (`componentes.js`).*
+- [x] **O site é totalmente responsivo em mobile, tablet e desktop?**
+  - *Sim. Breakpoints configurados e testados (375px, 768px, 1280px).*
+- [x] **Checklist de acessibilidade completo?**
+  - *Sim. Semântica HTML corrigida, textos alternativos (`alt`) e navegação por teclado validados.*
+- [x] **Pelo menos uma integração externa implementada?**
+  - *Sim. Foram implementadas quatro: Google Maps, WhatsApp API, Formspree e Links Sociais.*
+- [x] **README.md atualizado com todas as informações?**
+  - *Sim. Documentação completa das etapas 1 a 8 incluída.*
+- [x] **Rubrica de autoavaliação preenchida com justificativas?**
+  - *Sim. Seção 8 concluída com notas e reflexão crítica.*
+- [x] **Código limpo, organizado e comentado onde necessário?**
+  - *Sim. Estrutura de pastas (`css/`, `js/`, `componentes/`) organizada e arquivos comentados.*
+- [x] **Testado em diferentes navegadores (Chrome, Firefox, Edge)?**
+  - *Sim. Compatibilidade verificada.*
+- [x] **Console do navegador (F12) sem erros críticos?**
+  - *Sim. Erros de carregamento de script e CSS corrigidos.*
+
+---
+**Status do Projeto:** ✅ **CONCLUÍDO**
