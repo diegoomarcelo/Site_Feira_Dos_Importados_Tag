@@ -10,7 +10,7 @@ Este projeto visa a **digitalização** e **modernização** do site da Feira do
 | **Tema** | Digitalização e modernização do site Feira dos Importados de Taguatinga |
 | **Objetivo** | Criar um diretório online atrativo para busca de lojas/produtos e divulgação de informações. |
 | **Público-Alvo** | Consumidores, Lojistas e Visitantes em geral. |
-| **Tecnologias** | HTML5, CSS3 (Flexbox/Grid), JavaScript. |
+| **Tecnologias** | HTML5, CSS3 (Flexbox/Grid), JavaScript, Close Server, Formspree. |
 | **Status** | Protótipo e Estrutura Inicial Concluídos. |
 
 ## Justificativa
@@ -53,14 +53,22 @@ O projeto está organizado com foco em clareza e manutenção:
 
 ```bash
 Site_Feira_Dos_Importados_Tag/
+├── componentes/
+│   └── footer.html           # Rodapé
+│   └── header.html           # Cabeçalho
 ├── css/
 │   └── styles.css            # Estilos CSS principais (inclui responsividade)
+│   └── formulario.css        # Estilos CSS exclusivo para o formulário
 ├── img/                      # Diretório de imagens e ativos visuais
-├── js/                       # Arquivos JavaScript para interatividade (Ex: script.js)
+├── js/                       # Arquivos JavaScript para interatividade 
+│   └── componentes.js        # Programação para footer e header
+│   └── script.js             # Programação para carrossel, modal, etc.
 ├── .gitattributes            # Configuração Git para tratamento de arquivos
+├── formulario.html           # Página do formulário
 ├── index.html                # Página inicial (Home)
 ├── pagina_loja.html          # Página de listagem/detalhes de lojas
 └── pagina_noticias.html      # Página de notícias e eventos
+└── README.md      
 ```
 
 ## Protótipo 
@@ -666,3 +674,31 @@ O rodapé se adapta automaticamente:
 
 Essas melhorias deixaram o site mais confortável de navegar e garantiram que ele funcionasse bem em diferentes dispositivos.
 
+---
+
+## Etapa 6: Funcionalidades e Integrações Externas
+
+Para enriquecer a experiência do usuário e fornecer canais de comunicação essenciais, diversas integrações de serviços de terceiros foram implementadas no projeto.
+
+### 6.1. Google Maps Embed (Localização do Negócio)
+
+* Foi incorporado um mapa interativo do Google Maps diretamente no rodapé do site.
+* Esta funcionalidade utiliza um `<iframe>` para exibir a localização exata da Feira dos Importados, permitindo que os usuários visualizem o endereço e obtenham rotas facilmente.
+
+### 6.2. Botão de WhatsApp (Contato Direto)
+
+* Foi implementado um botão flutuante (FAB - Floating Action Button) que permanece fixo no canto da tela.
+* Este botão contém um link `wa.me` que direciona o usuário para uma conversa direta no WhatsApp, facilitando o contato imediato.
+* O botão é controlado por JavaScript para aparecer suavemente apenas após o usuário rolar a página, mantendo a interface limpa.
+
+### 6.3. Formulário de Contato com Formspree (sem back-end)
+
+* Foi criada uma página de contato com um formulário HTML e CSS completo.
+* Para eliminar a necessidade de um back-end (linguagem de servidor), o formulário está integrado com o serviço **Formspree**.
+* O formulário envia os dados diretamente para o endpoint do Formspree, que os valida e encaminha para o email do administrador.
+* Utilizamos JavaScript (AJAX) para uma submissão assíncTrona, que exibe mensagens de sucesso ou erro na própria página, sem a necessidade de recarregar.
+
+### 6.4. Redes Sociais (Links e Ícones)
+
+* Para conectar o site às redes sociais da empresa, foram adicionados ícones de Instagram e Facebook no rodapé.
+* Estes ícones funcionam como links diretos (`<a>`) para os perfis oficiais, incentivando os usuários a seguirem a feira e aumentando o engajamento.
