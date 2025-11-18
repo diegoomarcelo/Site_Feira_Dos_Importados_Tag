@@ -47,30 +47,6 @@ O projeto segue uma identidade visual coesa e focada na usabilidade:
 * **Estrutura:** Uso de **Grid** e **Flexbox** para garantir uma estrutura de layout **responsiva**, organizada e clara em todos os dispositivos.
 * **Elementos:** Ícones lineares e simples; botões com cores contrastantes e cantos arredondados para melhor usabilidade (UX).
 
-## Estrutura do Repositório
-
-O projeto está organizado com foco em clareza e manutenção:
-
-```bash
-Site_Feira_Dos_Importados_Tag/
-├── componentes/
-│   └── footer.html           # Rodapé
-│   └── header.html           # Cabeçalho
-├── css/
-│   └── styles.css            # Estilos CSS principais (inclui responsividade)
-│   └── formulario.css        # Estilos CSS exclusivo para o formulário
-├── img/                      # Diretório de imagens e ativos visuais
-├── js/                       # Arquivos JavaScript para interatividade 
-│   └── componentes.js        # Programação para footer e header
-│   └── script.js             # Programação para carrossel, modal, etc.
-├── .gitattributes            # Configuração Git para tratamento de arquivos
-├── formulario.html           # Página do formulário
-├── index.html                # Página inicial (Home)
-├── pagina_loja.html          # Página de listagem/detalhes de lojas
-└── pagina_noticias.html      # Página de notícias e eventos
-└── README.md      
-```
-
 ## Protótipo 
 
 O design completo do projeto pode ser visualizado no Figma:
@@ -94,6 +70,8 @@ Para visualizar e testar o site em sua máquina:
 
 ## Histórico de Desenvolvimento 
 
+## Histórico de Desenvolvimento 
+
 | Data | Etapa Realizada | Responsável | Observações |
 | :--- | :--- | :--- | :--- |
 | 08/10/2025 | Análise inicial e Definição de Objetivos | Ana e Diego | Início do planejamento e escopo. |
@@ -104,6 +82,13 @@ Para visualizar e testar o site em sua máquina:
 | 23/10/2025 | Incluindo novos cards e iniciando codificação com JavaScript | Ana e Diego | Botões, cards e carrossel |
 | 28/10/2025 | Incluindo Modal |Ana e Diego | Editando código HTML, CSS e programando com JavaScript. |
 | 28/10/2025 | **Revisão e Aprimoramento do README** | Ana e Diego | Inclusão de detalhes técnicos e melhoria da estrutura. |
+| 13/11/2025 | Revisão e Diagnóstico do Projeto (Etapa 1) | Ana e Diego | Análise de pontos fortes, problemas de layout e melhorias. |
+| 14/11/2025 | Modularização de Componentes (Etapa 2) | Ana e Diego | Separação de `header.html` e `footer.html`. Carregamento via JS. |
+| 15/11/2025 | Aprimoramento da Interatividade (Etapa 3) | Ana e Diego | Adição de "Voltar ao Topo" e validação de formulários. |
+| 16/11/2025 | Consolidação da Acessibilidade (Etapa 4) | Ana e Diego | Ajustes semânticos, `alt` tags, `aria-label` e foco visível. Teste Lighthouse (90/100). |
+| 17/11/2025 | Consolidação da Responsividade (Etapa 5) | Ana e Diego | Testes (375px, 768px, 1280px). Ajustes no header, forms e grids. |
+| 18/11/2025 | Implementação de Integrações Externas (Etapa 6) | Ana e Diego | Inclusão de Google Maps, botão WhatsApp e Formspree. |
+| 18/11/2025 | Organização Final e Documentação (Etapa 7) | Ana e Diego | Comentários no código e atualização final do `README.md`. |
 
 ## ⏭️ Próximos Passos (Roadmap)
 
@@ -680,16 +665,23 @@ Essas melhorias deixaram o site mais confortável de navegar e garantiram que el
 
 Para enriquecer a experiência do usuário e fornecer canais de comunicação essenciais, diversas integrações de serviços de terceiros foram implementadas no projeto.
 
+---
+
+
 ### 6.1. Google Maps Embed (Localização do Negócio)
 
 * Foi incorporado um mapa interativo do Google Maps diretamente no rodapé do site.
 * Esta funcionalidade utiliza um `<iframe>` para exibir a localização exata da Feira dos Importados, permitindo que os usuários visualizem o endereço e obtenham rotas facilmente.
+
+---
 
 ### 6.2. Botão de WhatsApp (Contato Direto)
 
 * Foi implementado um botão flutuante (FAB - Floating Action Button) que permanece fixo no canto da tela.
 * Este botão contém um link `wa.me` que direciona o usuário para uma conversa direta no WhatsApp, facilitando o contato imediato.
 * O botão é controlado por JavaScript para aparecer suavemente apenas após o usuário rolar a página, mantendo a interface limpa.
+
+---
 
 ### 6.3. Formulário de Contato com Formspree (sem back-end)
 
@@ -698,7 +690,64 @@ Para enriquecer a experiência do usuário e fornecer canais de comunicação es
 * O formulário envia os dados diretamente para o endpoint do Formspree, que os valida e encaminha para o email do administrador.
 * Utilizamos JavaScript (AJAX) para uma submissão assíncTrona, que exibe mensagens de sucesso ou erro na própria página, sem a necessidade de recarregar.
 
+---
+
 ### 6.4. Redes Sociais (Links e Ícones)
 
 * Para conectar o site às redes sociais da empresa, foram adicionados ícones de Instagram e Facebook no rodapé.
 * Estes ícones funcionam como links diretos (`<a>`) para os perfis oficiais, incentivando os usuários a seguirem a feira e aumentando o engajamento.
+---
+
+## Etapa 7: Organização Final e Documentação
+
+Para garantir que o projeto seja fácil de manter e que futuros desenvolvedores possam entender o código rapidamente, a etapa final foi focada na organização dos arquivos e na documentação interna do código.
+
+---
+
+### 7.1. Estrutura de Arquivos
+
+O projeto foi organizado em uma estrutura de pastas clara, separando as responsabilidades:
+
+Site_Feira_Dos_Importados_Tag/
+```bash
+
+├── componentes/
+│   └── footer.html           # Rodapé
+│   └── header.html           # Cabeçalho
+├── css/
+│   └── styles.css            # Estilos CSS principais (inclui responsividade)
+│   └── formulario.css        # Estilos CSS exclusivo para o formulário
+├── img/                      # Diretório de imagens e ativos visuais
+├── js/                       # Arquivos JavaScript para interatividade 
+│   └── componentes.js        # Programação para footer e header
+│   └── script.js             # Programação para carrossel, modal, etc.
+├── .gitattributes            # Configuração Git para tratamento de arquivos
+├── formulario.html           # Página do formulário
+├── index.html                # Página inicial (Home)
+├── pagina_loja.html          # Página de listagem/detalhes de lojas
+└── pagina_noticias.html      # Página de notícias e eventos
+└── README.md      
+```
+---
+
+### 7.2. Adicionar Comentários no Código
+
+Tanto os arquivos CSS quanto os JavaScript foram revisados e comentados.
+
+* No **CSS**, foram adicionados comentários em bloco (ex: `/* ====== FOOTER ====== */`) para delimitar seções principais, facilitando a localização de regras de estilo.
+* No **JavaScript**, cada funcionalidade (Modal, Carrossel, Botão WhatsApp, etc.) foi agrupada e identificada com comentários (ex: `// ========================= // Botão "Voltar ao topo" // =========================`).
+
+Isso torna o código "autodocumentado", permitindo que qualquer pessoa entenda o propósito de cada bloco de código rapidamente.
+
+---
+
+
+### 7.3. Atualizar o README.md
+
+Este próprio documento (`README.md`) foi atualizado para servir como a documentação central e final do projeto. Ele agora inclui:
+
+* A visão geral, tecnologias e estrutura do projeto.
+* O registro detalhado de todas as etapas de desenvolvimento (do Diagnóstico à Responsividade).
+* A documentação das novas integrações externas (Google Maps, WhatsApp, Formspree e Redes Sociais).
+
+Manter o `README.md` atualizado garante que qualquer pessoa que acesse o repositório entenda imediatamente o escopo, os objetivos e o estado atual do projeto.
