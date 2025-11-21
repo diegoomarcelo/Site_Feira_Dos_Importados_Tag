@@ -1005,7 +1005,7 @@ Se eu pudesse refazer o projeto desde o início, eu aproveitaria para aprofundar
 
 No geral, esta experiência me ajudou a crescer tecnicamente, a lidar melhor com prazos e a trabalhar de forma mais colaborativa. Estou satisfeita com o resultado do projeto e motivada a continuar estudando para desenvolver interfaces cada vez mais completas, funcionais e acessíveis.
 
-## 🤝 6.2 Reflexão da Dupla
+## 6.2 Reflexão da Dupla
 
 Ao longo do desenvolvimento deste projeto, nós dois percebemos o quanto evoluímos técnica e organizacionalmente. Desde as primeiras etapas, quando estávamos apenas entendendo a estrutura da Feira dos Importados de Taguatinga e como transformar suas informações em um site funcional, até chegar às fases finais de otimização e testes, aprendemos muito mais do que imaginávamos no início.
 
@@ -1022,7 +1022,7 @@ Os testes também foram essenciais. Testamos em navegadores diferentes, em vári
 No geral, acreditamos que o resultado final representa bem o objetivo do projeto. O site ficou organizado, funcional e visualmente agradável, apresentando informações da Feira dos Importados de maneira clara e acessível. Vemos esse projeto como algo que realmente demonstra nosso crescimento ao longo da disciplina, tanto tecnicamente quanto em relação à colaboração.
 
 
-## 📂 7.2 Organização da pasta `docs/`
+## 7.2 Organização da pasta `docs/`
 
 ```text
 docs/
