@@ -934,4 +934,91 @@ Os títulos foram organizados da seguinte forma:
 - **Notícias:** Feira dos Importados de Taguatinga | Notícias  
 - **Contato:** Feira dos Importados de Taguatinga | Fale Conosco  
 
+# 🧪 Testes Realizados
+
+Nesta seção reunimos os testes de compatibilidade e responsividade realizados no projeto. O objetivo foi verificar o funcionamento do site em diferentes navegadores e dispositivos, garantindo uma boa experiência de uso para diversos públicos.
+
+---
+
+## ✔ Navegadores Testados
+
+Os testes foram realizados nos seguintes navegadores:
+
+- Google Chrome  
+- Mozilla Firefox  
+- Microsoft Edge  
+
+📁 **Evidências dos testes em navegadores:**  
+Localizadas em: `docs/testes-navegadores/`
+
+---
+
+## ✔ Dispositivos e Resoluções Testadas
+
+Durante os testes de responsividade, avaliamos o comportamento do site em diferentes tamanhos de tela
+
+| Dispositivo / Simulação | Resolução |
+|-------------------------|-----------|
+| iPhone SE | 375 × 667 |
+| iPhone 12 Pro | 390 × 844 |
+| iPad | 768 × 1024 |
+| Tablet Android | 800 × 1280 |
+| Desktop HD | 1280 × 720 |
+| Desktop Full HD | 1920 × 1080 |
+
+📁 **Evidências dos testes de responsividade:**  
+Localizadas em: `docs/testes-responsividade/`
+
+---
+
+## ✔ Observação Final
+
+Durante os testes realizados, o site funcionou normalmente em todos os navegadores e resoluções avaliadas, sem apresentar erros ou limitações relevantes. As páginas carregaram corretamente, os elementos interativos responderam adequadamente e a estrutura visual se manteve consistente tanto em dispositivos móveis quanto em desktops.
+
+Todas as evidências foram organizadas nas pastas indicadas para consulta.
+
+## ✨ Reflexão Individual – Ana Clara Lélis
+
+Durante o desenvolvimento deste projeto, pude aprender e aprimorar diversas habilidades importantes tanto na parte técnica quanto na parte organizacional. Trabalhar no site da Feira dos Importados de Taguatinga foi uma experiência que uniu criatividade, planejamento e prática, e me fez compreender melhor como cada fase contribui para o resultado final.
+
+### 🔹 Aprendizados Técnicos
+
+Ao longo do projeto, evoluí bastante no uso de HTML, CSS e JavaScript. Aprendi a estruturar páginas de forma mais organizada, aplicar estilos de forma consistente e entender melhor como funciona a interação do usuário com elementos visuais. Além disso, a etapa de otimização do site me ajudou a perceber a importância de imagens leves, de arquivos minificados e de um `<head>` bem configurado para melhorar desempenho e acessibilidade.
+
+Também aprendi na prática como a responsividade é essencial. Testar o site em diversas telas e ver como pequenos detalhes fazem diferença no celular me ajudou a entender o valor da adaptação visual.
+
+### 🔹 Aprendizados sobre Trabalho em Equipe
+
+Trabalhar em dupla foi uma experiência muito válida. Percebi como a comunicação ajuda a evitar retrabalhos e como cada pessoa traz sua visão para o projeto. Distribuímos tarefas, discutimos ideias e buscamos manter o ritmo de desenvolvimento mesmo quando surgiam imprevistos.
+
+### 🔹 Desafios Enfrentados
+
+Um dos maiores desafios foi organizar todas as etapas do projeto dentro dos prazos e conciliar com outras atividades acadêmicas. Outra dificuldade foi compreender algumas partes mais técnicas do roteiro, mas com estudo, pesquisa e colaboração conseguimos superar esses pontos.
+
+Também enfrentei desafios ao otimizar o site e ao entender as diferenças de comportamento entre resoluções de tela. Isso me fez prestar mais atenção aos detalhes e me ensinou a testar constantemente o que estou construindo.
+
+### 🔹 O que faria diferente
+
+Se eu pudesse refazer o projeto desde o início, eu aproveitaria para aprofundar ainda mais alguns detalhes visuais e funcionais, buscando deixar o site ainda mais completo. Também dedicaria mais tempo para explorar recursos avançados, como pequenas animações, ajustes de tipografia ou melhorias de usabilidade. Acredito que esses elementos poderiam elevar ainda mais a experiência do usuário e complementar o que já foi desenvolvido nesta versão.
+
+### 🔹 Conclusão
+
+No geral, esta experiência me ajudou a crescer tecnicamente, a lidar melhor com prazos e a trabalhar de forma mais colaborativa. Estou satisfeita com o resultado do projeto e motivada a continuar estudando para desenvolver interfaces cada vez mais completas, funcionais e acessíveis.
+
+## 🤝 6.2 Reflexão da Dupla
+
+Ao longo do desenvolvimento deste projeto, nós dois percebemos o quanto evoluímos técnica e organizacionalmente. Desde as primeiras etapas, quando estávamos apenas entendendo a estrutura da Feira dos Importados de Taguatinga e como transformar suas informações em um site funcional, até chegar às fases finais de otimização e testes, aprendemos muito mais do que imaginávamos no início.
+
+Uma das evoluções mais marcantes foi na organização do código. No começo, cada página tinha seu próprio header e footer, mas logo percebemos que isso tornava o projeto mais difícil de manter. Decidimos então transformar essas partes em componentes e carregá-los via JavaScript. Essa mudança deixou o projeto mais limpo, mais profissional e facilitou bastante o restante do desenvolvimento. Esse aprendizado de modularização foi um dos pontos mais importantes para nós.
+
+Também tivemos um amadurecimento grande na forma como pensamos o layout. À medida que avançávamos, fomos percebendo o que funcionava e o que precisava ser ajustado: espaçamentos, fontes, cores, imagens, estrutura dos cards, organização das seções… Tudo isso passou por revisões. Isso nos ajudou a desenvolver um olhar mais crítico para a experiência do usuário e para a consistência visual do site.
+
+Trabalhar em dupla também fez muita diferença. A troca constante de ideias, a discussão sobre como resolver determinados pontos e a divisão equilibrada das tarefas tornaram o processo mais leve e mais eficiente. Cada um colaborou com suas habilidades, e isso ajudou a identificar erros com mais facilidade e encontrar soluções melhores do que se estivéssemos trabalhando sozinhos. 
+
+A parte de otimização do site — como compressão de imagens, minificação de arquivos e ajuste do `<head>` — foi outro momento de aprendizado significativo. Não tínhamos a dimensão de como essas práticas influenciam a velocidade e o desempenho do site até aplicarmos no projeto. Ao ver o site carregando mais rápido e funcionando bem em diferentes dispositivos, percebemos como pequenos detalhes fazem grande diferença.
+
+Os testes também foram essenciais. Testamos em navegadores diferentes, em várias resoluções. Foi interessante perceber como cada tela se comporta de um jeito e como ajustes simples garantem que o site continue funcionando para qualquer pessoa que o acessar.
+
+No geral, acreditamos que o resultado final representa bem o objetivo do projeto. O site ficou organizado, funcional e visualmente agradável, apresentando informações da Feira dos Importados de maneira clara e acessível. Vemos esse projeto como algo que realmente demonstra nosso crescimento ao longo da disciplina, tanto tecnicamente quanto em relação à colaboração.
+
 
