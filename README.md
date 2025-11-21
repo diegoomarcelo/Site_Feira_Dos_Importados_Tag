@@ -1022,3 +1022,31 @@ Os testes também foram essenciais. Testamos em navegadores diferentes, em vári
 No geral, acreditamos que o resultado final representa bem o objetivo do projeto. O site ficou organizado, funcional e visualmente agradável, apresentando informações da Feira dos Importados de maneira clara e acessível. Vemos esse projeto como algo que realmente demonstra nosso crescimento ao longo da disciplina, tanto tecnicamente quanto em relação à colaboração.
 
 
+## 📂 7.2 Organização da pasta `docs/`
+
+```text
+docs/
+├── wireframe/
+│   ├── wireframe-figma.png_page-0001.jpg
+│   ├── wireframe-figma.png_page-0002.jpg
+│   ├── wireframe-figma.png_page-0003.jpg
+│   └── wireframe-figma.pdf
+│
+├── testes-navegadores/
+│   ├── Navegador-GoogleChrome.png
+│   ├── Navegador-Firefox.png
+│   └── Navegador-Explorer.png
+│
+├── testes-responsividade/
+│   ├── iPhone SE (375x667).png
+│   ├── iPhone 12 Pro (390x844).png
+│   ├── iPad (768x1024).png
+│   ├── iPad Pro (1024x1366).png
+│   ├── Desktop HD 1280x720.png
+│   └── Desktop Full HD 1920x1080.png
+│
+├── avaliacoes-recebidas/
+│   └── (sem arquivos no momento)
+│
+└── avaliacoes-enviadas/
+    └── (sem arquivos no momento)
