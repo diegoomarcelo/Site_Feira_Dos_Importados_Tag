@@ -837,3 +837,101 @@ Apesar de o projeto estar funcional e robusto, identificamos pontos para evoluç
 
 ---
 **Status do Projeto:** ✅ **CONCLUÍDO**
+
+# 📘 Parte 3 
+
+### Etapa 3: Otimização de Performance 
+
+Nesta etapa iniciamos um processo de melhoria do desempenho geral do site. O foco foi tornar as páginas mais leves e rápidas, principalmente por meio da otimização de imagens e da redução do tamanho dos arquivos utilizados.
+
+---
+
+## 🔹 3.1 Otimização de Imagens
+
+Para melhorar o tempo de carregamento, realizamos otimizações nas imagens do projeto:
+
+- Comprimimos as imagens utilizando **TinyPNG** e **Squoosh**.
+- Substituímos imagens pesadas por versões otimizadas.
+- Aplicamos o atributo `loading="lazy"` em imagens que aparecem somente após rolagem, incluindo:
+  - Cards de lojas (`pagina_loja.html`)
+  - Cards de notícias (`pagina_noticias.html`)
+  - Imagens secundárias da Home
+- Resultado: **redução do carregamento inicial** e melhor desempenho em dispositivos móveis.
+
+### ✔ Exemplo aplicado no HTML:
+
+```html
+<img src="img/img_da_loja_para_catalago/ad_acessorios.jpg"
+     alt="Logo da loja AD Acessórios"
+     loading="lazy">
+```
+
+## 🔹 3.2 Minificação de CSS e JavaScript
+
+Com o objetivo de melhorar o desempenho geral do site, realizamos a minificação dos arquivos principais de CSS e JavaScript. Esse processo reduz o tamanho dos arquivos, remove espaços em branco, comentários e otimiza a transferência para o navegador, deixando o carregamento mais rápido.
+
+### ✔ Arquivos minificados
+
+- `css/styles.css` → **`css/styles.min.css`**
+- `css/formulario.css` → **`css/formulario.min.css`**
+- `js/script.js` → **`js/script.min.js`**
+
+Mantivemos os arquivos originais no repositório para facilitar futuras manutenções, pois a versão minificada não é adequada para editar manualmente.
+
+### ✔ Linguagens e ferramentas utilizadas
+
+- **CSS Minifier** para minificar `styles.css` e `formulario.css`
+- **JavaScript Minifier** para gerar `script.min.js`
+
+---
+
+## ✔ Atualização dos arquivos HTML
+
+Após gerar as versões minificadas, atualizamos todas as páginas HTML para utilizarem os novos arquivos mais leves:
+
+```html
+<link rel="stylesheet" href="css/styles.min.css">
+<script src="js/script.min.js"></script>
+``` 
+
+## 🔹 3.3 Metadados Essenciais e Favicon
+
+Nesta etapa realizamos ajustes importantes no `<head>` das páginas do site. O objetivo foi organizar melhor as informações básicas que os navegadores, buscadores e dispositivos utilizam para interpretar e exibir o conteúdo corretamente. 
+
+---
+
+### ✔ Adição de Metadados
+
+Foram adicionados metadados essenciais em todas as páginas HTML, como:
+
+- **charset** — garante que acentos e caracteres especiais sejam exibidos corretamente.
+- **viewport** — permite que o site se adapte adequadamente às telas de celular.
+- **description** — pequeno resumo que ajuda buscadores como Google a entender o propósito da página.
+- **keywords** — palavras-chave relacionadas ao assunto do site.
+- **author** — identificação dos desenvolvedores do projeto.
+
+Esses metadados contribuem para uma melhor organização interna do site, maior acessibilidade e também auxiliam na otimização para mecanismos de busca.
+
+---
+
+### ✔ Inserção do Favicon
+
+Criamos o arquivo `favicon.png` e o adicionamos no diretório `img/`.  
+Em seguida, inserimos o seguinte código dentro do `<head>` das páginas:
+
+```html
+<link rel="icon" href="img/favicon.png" type="image/png">
+``` 
+
+### ✔ Títulos das Páginas
+
+Atualizamos os `<title>` de cada página para que representem de forma clara o conteúdo exibido.
+
+Os títulos foram organizados da seguinte forma:
+
+- **Início:** Feira dos Importados de Taguatinga | Início  
+- **Lojas:** Feira dos Importados de Taguatinga | Lojas  
+- **Notícias:** Feira dos Importados de Taguatinga | Notícias  
+- **Contato:** Feira dos Importados de Taguatinga | Fale Conosco  
+
+
