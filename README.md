@@ -840,6 +840,22 @@ Apesar de o projeto estar funcional e robusto, identificamos pontos para evoluç
 
 # 📘 Parte 3 
 
+## 2. Publicação no GitHub Pages
+## 2.1. Commit e Push Final
+Importante dizer que, nesse processo, dei pull, mas ao subir não havia nenhuma alteração. Sendo assim, a mensagem informando que não tem nada de novo para enviar segue na tela:
+
+<img width="730" height="155" alt="image" src="https://github.com/user-attachments/assets/5e944722-e729-4e01-9909-178c45b04e47" />
+
+## 2.2. Configuração do GitHub Pages e 2.3. Primeira Verificação
+
+Link: https://diegoomarcelo.github.io/Site_Feira_Dos_Importados_Tag/
+
+Site publicado no dia 21/11/2025:
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/8c5c03dd-0856-4d92-a527-265048753560" />
+
+---
+
 ### Etapa 3: Otimização de Performance 
 
 Nesta etapa iniciamos um processo de melhoria do desempenho geral do site. O foco foi tornar as páginas mais leves e rápidas, principalmente por meio da otimização de imagens e da redução do tamanho dos arquivos utilizados.
@@ -1196,6 +1212,11 @@ docs/
     └── avaliacao-dupla-daniel-e-carlos
 ```
 ---
+
+## 7.3 Commit Final
+
+<img width="738" height="596" alt="Captura de tela 2025-11-22 005903" src="https://github.com/user-attachments/assets/cb274581-43a9-4231-99a0-e7343836b6be" />
+
 ### 7.4. Checklist Final de Entrega
 
 - [x] Site publicado no GitHub Pages e funcionando perfeitamente
