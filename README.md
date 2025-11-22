@@ -836,7 +836,7 @@ Apesar de o projeto estar funcional e robusto, identificamos pontos para evoluç
   - *Sim. Erros de carregamento de script e CSS corrigidos.*
 
 ---
-**Status do Projeto:** ✅ **CONCLUÍDO**
+---
 
 # 📘 Parte 3 
 
@@ -977,7 +977,11 @@ Durante os testes realizados, o site funcionou normalmente em todos os navegador
 
 Todas as evidências foram organizadas nas pastas indicadas para consulta.
 
-## ✨ Reflexão Individual – Ana Clara Lélis
+---
+
+## 6. Reflexão e Síntese de Aprendizados
+
+## 6.1 ✨ Reflexão Individual – Ana Clara Lélis
 
 Durante o desenvolvimento deste projeto, pude aprender e aprimorar diversas habilidades importantes tanto na parte técnica quanto na parte organizacional. Trabalhar no site da Feira dos Importados de Taguatinga foi uma experiência que uniu criatividade, planejamento e prática, e me fez compreender melhor como cada fase contribui para o resultado final.
 
@@ -1005,7 +1009,29 @@ Se eu pudesse refazer o projeto desde o início, eu aproveitaria para aprofundar
 
 No geral, esta experiência me ajudou a crescer tecnicamente, a lidar melhor com prazos e a trabalhar de forma mais colaborativa. Estou satisfeita com o resultado do projeto e motivada a continuar estudando para desenvolver interfaces cada vez mais completas, funcionais e acessíveis.
 
+### ✨ Reflexão Individual – Diego Marcelo
+
+Fazer esse projeto de modernização do site da Feira dos Importados foi uma experiência que "virou a chave" para mim. Mais do que apenas entregar uma tarefa, esse processo reforçou o quanto eu curto essa mistura de criatividade com lógica que a programação exige. Ver o código se transformando em algo visual e funcional na tela é uma sensação muito boa.
+
+### 🔹 Mão na massa e aprendizados
+
+Sinceramente, eu saí total da minha zona de conforto. Uma coisa é ver a teoria na aula, outra é ter que fazer funcionar na prática. Tive que mergulhar de cabeça no HTML, CSS e JavaScript para resolver os problemas que iam aparecendo. Aprendi que a área de Front-end pede estudo constante, e cada erro que eu corrigia servia para fixar ainda mais o conteúdo.
+
+### 🔹 Meu primeiro projeto "de verdade"
+
+Eu guardo cada parte desse processo com muito carinho porque considero esse, de fato, o meu primeiro projeto real. Tenho total noção de que ainda tenho muito chão pela frente e muita coisa para evoluir, mas sinto um orgulho gigante do que construímos. Não vejo esse site como algo "encerrado"; minha ideia é voltar nesse código no futuro, quando eu tiver mais bagagem, para transformar ele em algo ainda mais incrível e magnífico.
+
+### 🔹 A importância da dupla
+
+Nada disso teria ficado tão bom sem a minha dupla, a Ana Clara Lélis. Construir isso junto com ela foi essencial. Ter alguém para trocar ideia e dividir as responsabilidades tornou o aprendizado muito mais leve e produtivo.
+
+### 🔹 Conclusão
+
+Fecho essa etapa com a certeza de que é aqui que eu quero estar. Esse projeto me deu o gás que eu precisava para continuar estudando e me aprofundando nas tecnologias. Sei que é só o começo, mas estou muito empolgado para os próximos desafios.
+
 ## 6.2 Reflexão da Dupla
+
+---
 
 Ao longo do desenvolvimento deste projeto, nós dois percebemos o quanto evoluímos técnica e organizacionalmente. Desde as primeiras etapas, quando estávamos apenas entendendo a estrutura da Feira dos Importados de Taguatinga e como transformar suas informações em um site funcional, até chegar às fases finais de otimização e testes, aprendemos muito mais do que imaginávamos no início.
 
@@ -1021,6 +1047,48 @@ Os testes também foram essenciais. Testamos em navegadores diferentes, em vári
 
 No geral, acreditamos que o resultado final representa bem o objetivo do projeto. O site ficou organizado, funcional e visualmente agradável, apresentando informações da Feira dos Importados de maneira clara e acessível. Vemos esse projeto como algo que realmente demonstra nosso crescimento ao longo da disciplina, tanto tecnicamente quanto em relação à colaboração.
 
+---
+
+## 6.3 Plano de Ação Futuro
+
+**Melhorias Técnicas Planejadas:**
+
+[ ] Tornar o sistema de Login e Cadastro funcional (integrar com banco de dados). <br>
+[ ] Substituir imagens estáticas das lojas por conteúdo real e dinâmico. <br>
+[ ] Corrigir todos os links de navegação que ainda não funcionam (sair do protótipo). <br>
+[ ] Dar mais movimento e interatividade para a página de listagem das lojas. <br>
+[ ] Modernizar o menu. <br>
+
+**Conhecimentos a Aprofundar:**
+
+1.  **Integração com Backend:** Entender como conectar nosso front-end a um banco de dados para que o cadastro de usuários e lojas funcione de verdade.
+2.  **Frameworks Modernos (React ou Vue):** Estudar essas tecnologias para a próxima versão do site, facilitando a criação de componentes e a gestão do estado da aplicação.
+3.  **Manipulação de dados dinâmicos:** Aprender a preencher as informações da página (como a lista de lojas) automaticamente via código, sem precisar escrever tudo no HTML fixo.
+4.  **Animações CSS e UX:** Aprofundar em transições e efeitos visuais para deixar a navegação mais fluida e profissional.
+
+**Aplicação em Disciplinas Futuras:**
+
+Esse projeto serviu como nossa "fundação". Nas próximas disciplinas (como Banco de Dados ou Desenvolvimento Web Avançado), não começaremos do zero: já teremos a estrutura do front-end pronta e entendida. Isso vai nos permitir focar na lógica mais complexa e na conexão com o servidor, usando esse mesmo site da Feira como base para aplicar as novas tecnologias que aprendermos. Além disso, a experiência prática com GitHub e trabalho em equipe já nos deixa muito mais preparados para os projetos maiores que virão no curso.
+
+---
+### 7. Documentação Final e Entrega
+
+#### 7.1. Checklist de Documentação Completa
+
+- [x] Título e descrição do projeto
+- [x] Integrantes e papéis
+- [x] Link para wireframe Figma
+- [x] Link do GitHub Pages
+- [x] Tecnologias utilizadas
+- [x] Estrutura de pastas explicada
+- [x] Resumo das três partes do projeto
+- [x] Otimizações realizadas
+- [x] Testes documentados (navegadores, dispositivos)
+- [x] Reflexões individuais e da dupla
+- [x] Plano de melhorias futuras
+- [x] Créditos (fontes, ícones, imagens de terceiros)
+      
+---
 
 ## 7.2 Organização da pasta `docs/`
 
@@ -1050,3 +1118,19 @@ docs/
 │
 └── avaliacoes-enviadas/
     └── avaliacao-dupla-daniel-e-carlos
+```
+---
+### 7.4. Checklist Final de Entrega
+
+- [x] Site publicado no GitHub Pages e funcionando perfeitamente
+- [x] Todas as páginas acessíveis e sem erros
+- [x] Otimizações de performance aplicadas
+- [x] Testes em múltiplos navegadores documentados
+- [x] Testes de responsividade documentados
+- [x] Dois projetos de colegas avaliados com rubrica
+- [x] Feedbacks recebidos de duas duplas
+- [x] Reflexões individuais e coletivas escritas
+- [x] README.md completo e profissional
+- [x] Pasta `docs/` organizada com evidências
+- [x] Código limpo, comentado e organizado
+- [x] Todos os commits com mensagens descritivas
