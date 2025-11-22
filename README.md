@@ -865,6 +865,7 @@ Para melhorar o tempo de carregamento, realizamos otimizações nas imagens do p
      alt="Logo da loja AD Acessórios"
      loading="lazy">
 ```
+---
 
 ## 🔹 3.2 Minificação de CSS e JavaScript
 
@@ -934,13 +935,14 @@ Os títulos foram organizados da seguinte forma:
 - **Notícias:** Feira dos Importados de Taguatinga | Notícias  
 - **Contato:** Feira dos Importados de Taguatinga | Fale Conosco  
 
-# 🧪 Testes Realizados
+---
+
+## 4. Testes de Compatibilidade
 
 Nesta seção reunimos os testes de compatibilidade e responsividade realizados no projeto. O objetivo foi verificar o funcionamento do site em diferentes navegadores e dispositivos, garantindo uma boa experiência de uso para diversos públicos.
 
----
 
-## ✔ Navegadores Testados
+## 4.1. Testes em Diferentes Navegadores
 
 Os testes foram realizados nos seguintes navegadores:
 
@@ -948,12 +950,30 @@ Os testes foram realizados nos seguintes navegadores:
 - Mozilla Firefox  
 - Microsoft Edge  
 
+### Checklist de Verificação nos Navegadores
+
+**Para cada navegador, verificamos:**
+
+- [x] O layout está correto?
+- [x] Todas as páginas carregam?
+- [x] Imagens aparecem?
+- [x] CSS está aplicado corretamente?
+- [x] JavaScript funciona (se houver)?
+- [x] Formulários estão funcionais?
+- [x] Menu e navegação funcionam?
+
+**Verificação no Console (F12):**
+
+- [x] Há erros JavaScript? (Verificado: Sem erros)
+- [x] Há avisos sobre recursos não carregados? (Verificado)
+- [x] Há problemas de CORS ou caminhos? (Verificado)
+
 📁 **Evidências dos testes em navegadores:**  
 Localizadas em: `docs/testes-navegadores/`
 
 ---
 
-## ✔ Dispositivos e Resoluções Testadas
+## 4.2. Testes de Responsividade
 
 Durante os testes de responsividade, avaliamos o comportamento do site em diferentes tamanhos de tela
 
@@ -971,11 +991,67 @@ Localizadas em: `docs/testes-responsividade/`
 
 ---
 
+## 4.3. Teste em Dispositivos Reais
+
+Testado no Iphone 12 Pro
+
+---
+
+## 4.4. Documentação dos Testes
+
+Para garantir a estabilidade e a acessibilidade do projeto, executamos uma bateria de testes manuais focada na compatibilidade entre navegadores e na adaptação do layout para diferentes tamanhos de tela.
+
+### 🌐 Navegadores Testados
+Validamos o layout, o carregamento de imagens e a execução de scripts (sem erros no console) nas versões mais recentes de:
+* **Google Chrome**
+* **Mozilla Firefox**
+* **Microsoft Edge**
+
+### 📱 Dispositivos e Resoluções
+Utilizamos ferramentas de simulação (DevTools) e também testes em hardware real para garantir a responsividade:
+
+| Dispositivo / Cenário | Resolução | Tipo de Teste |
+| :--- | :--- | :--- |
+| **iPhone SE** | 375 × 667 | Simulação |
+| **iPhone 12 Pro** | 390 × 844 | **Dispositivo Real** + Simulação |
+| **iPad** | 768 × 1024 | Simulação |
+| **Tablet Android** | 800 × 1280 | Simulação |
+| **Desktop HD** | 1280 × 720 | Monitor |
+| **Desktop Full HD** | 1920 × 1080 | Monitor |
+
+### 🛠️ Problemas Encontrados e Soluções
+Durante o desenvolvimento e a fase de testes, enfrentamos alguns desafios que foram corrigidos antes da entrega final:
+
+1.  **Manutenção do Código (Header e Footer):**
+    * *Problema:* Percebemos que repetir o código do cabeçalho e rodapé em todas as páginas gerava retrabalho e inconsistências.
+    * *Solução:* Modularizamos essas seções utilizando JavaScript para carregá-las dinamicamente, limpando o HTML das páginas.
+2.  **Responsividade do Menu:**
+    * *Problema:* O menu quebrava em resoluções intermediárias (tablets).
+    * *Solução:* Ajustamos os *Media Queries* no CSS para garantir que o menu hambúrguer ative no momento correto.
+
+### ⚠️ Limitações Conhecidas
+Nesta versão de entrega (MVP - Mínimo Produto Viável), o projeto apresenta as seguintes limitações planejadas:
+* **Funcionalidade de Login:** A página de login e cadastro é um protótipo visual (Front-end), sem integração com banco de dados real.
+* **Imagens de Lojas:** Algumas imagens na seção de lojas são estáticas/repetidas para fins de demonstração do layout.
+* **Links em Construção:** Alguns links de navegação secundária ainda não levam a páginas ativas, pois o foco foi na estrutura principal.
+
+### 📂 Evidências dos Testes
+As capturas de tela e comprovações dos testes realizados estão organizadas nas seguintes pastas da documentação:
+
+* 👉 **Navegadores:** [`docs/testes-navegadores/`](docs/testes-navegadores/)
+* 👉 **Responsividade:** [`docs/testes-responsividade/`](docs/testes-responsividade/)
+
+
+
 ## ✔ Observação Final
 
 Durante os testes realizados, o site funcionou normalmente em todos os navegadores e resoluções avaliadas, sem apresentar erros ou limitações relevantes. As páginas carregaram corretamente, os elementos interativos responderam adequadamente e a estrutura visual se manteve consistente tanto em dispositivos móveis quanto em desktops.
 
 Todas as evidências foram organizadas nas pastas indicadas para consulta.
+
+---
+
+## 5. Avaliação entre Pares foi realizado.
 
 ---
 
